@@ -277,6 +277,8 @@ const shuffleArray = (array) => {
 
 const Cards = () => {
   const [cards, setCards] = useState([]);
+  const [betHistory, setBetHistory] = useState([]); // Historial de apuestas
+  const [allSwiped, setAllSwiped] = useState(false); // Estado para saber si ya se deslizaron todas
 
   useEffect(() => {
     const shuffledData = shuffleArray(initialData);
@@ -284,7 +286,34 @@ const Cards = () => {
   }, []);
 
   const onSwipe = (direction, name) => {
-    setCards((prevCards) => prevCards.filter((card) => card.name !== name));
+    const swipedCard = cards.find((card) => card.name === name);
+
+    // Si se desliza a la izquierda, la apuesta es rechazada; si se desliza a la derecha, es aceptada
+    const betStatus = direction === "right" ? "Aprobada" : "Rechazada";
+
+    // Agregar la apuesta al historial con el estado correspondiente
+    setBetHistory((prevHistory) => [
+      ...prevHistory,
+      {
+        match: name,
+        betType: swipedCard.bettingInfo.betType,
+        betFor: swipedCard.bettingInfo.betFor,
+        odds: swipedCard.bettingInfo.odds,
+        status: betStatus, // Estado de la apuesta (Aprobada o Rechazada)
+      },
+    ]);
+
+    // Filtrar la tarjeta deslizada
+    setCards((prevCards) => {
+      const newCards = prevCards.filter((card) => card.name !== name);
+
+      // Si no quedan más tarjetas, se marca que ya se deslizaron todas
+      if (newCards.length === 0) {
+        setAllSwiped(true);
+      }
+
+      return newCards;
+    });
   };
 
   const totalCards = initialData.length;
@@ -295,11 +324,45 @@ const Cards = () => {
     <>
       <ProgressBar progress={progress} />
       <div className="cards-container">
-        <div className="card-stack">
-          {cards.map((card) => (
-            <Card key={card.name} card={card} onSwipe={onSwipe} />
-          ))}
-        </div>
+        {allSwiped ? (
+          <div className="bet-summary">
+            <h2>¡Todas las apuestas realizadas!</h2>
+            <p>Historial de apuestas:</p>
+            <table className="bet-summary__table">
+              <thead>
+                <tr>
+                  <th>Partido</th>
+                  <th>Tipo de apuesta</th>
+                  <th>A favor de</th>
+                  <th>Cuota</th>
+                  <th>Estado</th>
+                </tr>
+              </thead>
+              <tbody>
+                {betHistory.map((bet, index) => (
+                  <tr
+                    key={index}
+                    className={`bet-summary__row ${
+                      bet.status === "Aprobada" ? "approved" : "rejected"
+                    }`}
+                  >
+                    <td>{bet.match}</td>
+                    <td>{bet.betType}</td>
+                    <td>{bet.betFor}</td>
+                    <td>{bet.odds}</td>
+                    <td>{bet.status}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+        ) : (
+          <div className="card-stack">
+            {cards.map((card) => (
+              <Card key={card.name} card={card} onSwipe={onSwipe} />
+            ))}
+          </div>
+        )}
       </div>
     </>
   );

@@ -182,3 +182,49 @@
 .swipe-button:hover {
   background-color: #555; /* Cambia a un gris oscuro al hacer hover */
 }
+.bet-summary {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.bet-summary h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.bet-summary__table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  font-size: 16px;
+}
+
+.bet-summary__table th,
+.bet-summary__table td {
+  padding: 12px 15px;
+  text-align: center;
+  border-bottom: 1px solid #ddd;
+}
+
+.bet-summary__table th {
+  background-color: #002361; /* Fondo oscuro para los encabezados */
+  color: white;
+}
+
+.bet-summary__row.approved {
+  background-color: #e8f5e9; /* Verde suave para apuestas aprobadas */
+  color: #388e3c; /* Texto verde oscuro */
+}
+
+.bet-summary__row.rejected {
+  background-color: #ffebee; /* Rojo suave para apuestas rechazadas */
+  color: #d32f2f; /* Texto rojo oscuro */
+}
+
+.bet-summary__row td {
+  transition: background-color 0.3s ease;
+}
+
+.bet-summary__row:hover {
+  background-color: #f1f1f1; /* Color de fondo al hacer hover */
+}
