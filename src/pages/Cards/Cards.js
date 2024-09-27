@@ -26,6 +26,7 @@ const initialData = [
     ],
     bettingInfo: {
       betType: "Ganador del partido",
+      price: 2000,
       betFor: "Liverpool",
       odds: 2.5,
     },
@@ -53,6 +54,7 @@ const initialData = [
     bettingInfo: {
       betType: "Primero en marcar",
       betFor: "Real Madrid",
+      price: 2000,
       odds: 3.0,
     },
   },
@@ -106,6 +108,7 @@ const initialData = [
       betType: "Ambos equipos marcan",
       betFor: "Sí",
       odds: 2.0,
+      price: 500,
     },
   },
   {
@@ -132,6 +135,7 @@ const initialData = [
       betType: "Primer gol",
       betFor: "Junior",
       odds: 1.9,
+      price: 2000,
     },
   },
   {
@@ -158,6 +162,7 @@ const initialData = [
       betType: "Resultado exacto",
       betFor: "1-0 América",
       odds: 3.5,
+      price: 5000,
     },
   },
   {
@@ -184,6 +189,7 @@ const initialData = [
       betType: "Marcador al descanso",
       betFor: "1-1",
       odds: 2.1,
+      price: 12000,
     },
   },
   {
@@ -210,6 +216,7 @@ const initialData = [
       betType: "Doble oportunidad",
       betFor: "Alianza o empate",
       odds: 1.75,
+      price: 2000,
     },
   },
   {
@@ -236,6 +243,7 @@ const initialData = [
       betType: "Ganador del partido",
       betFor: "Rionegro Águilas",
       odds: 1.95,
+      price: 1000,
     },
   },
   {
@@ -262,6 +270,7 @@ const initialData = [
       betType: "Ambos equipos marcan",
       betFor: "Sí",
       odds: 2.3,
+      price: 5000,
     },
   },
 ];

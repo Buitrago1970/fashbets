@@ -22,7 +22,11 @@ function Card({ card, onSwipe }) {
       <div className="card">
         <div className="card__content">
           <CardHeader league={card.league} sport={card.sport} />
-          <TeamsInfo teams={card.teams} time={card.time} />
+          <TeamsInfo
+            teams={card.teams}
+            time={card.time}
+            betFor={card.bettingInfo.betFor}
+          />
           <AuthInfo betInfo={card.bettingInfo} />
         </div>
       </div>
