@@ -3,7 +3,7 @@
   display: flex;
   justify-content: center;
   margin: 50px 0;
-  margin-bottom: 153px;
+  margin-bottom: 107px;
 }
 
 .card-stack {
@@ -299,4 +299,40 @@
 
 .reset-button:hover {
   background-color: #45a049; /* Verde más oscuro al pasar el mouse */
+}
+/* Asegúrate de que esta clase exista si no la tienes */
+.cards-container {
+  position: relative;
+}
+
+/* Contenedor de los botones */
+.buttons-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 50px;
+}
+
+/* Estilos generales para los botones */
+.action-button {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  font-size: 30px;
+  color: #fff;
+  border: none;
+  margin: 0 20px;
+  cursor: pointer;
+  background-color: #ccc;
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+  transition: transform 0.2s;
+}
+
+/* Botón de rechazo (X) */
+.reject-button {
+  background-color: #ff4d4f; /* Color rojo */
+}
+
+/* Botón de aprobación (✔) */
+.approve-button {
+  background-color: #52c41a; /* Color verde */
 }

@@ -379,6 +379,10 @@ const Cards = () => {
           </div>
         )}
       </div>
+      <div className="buttons-container">
+        <button className="action-button reject-button">X</button>
+        <button className="action-button approve-button">✔</button>
+      </div>
     </>
   );
 };
