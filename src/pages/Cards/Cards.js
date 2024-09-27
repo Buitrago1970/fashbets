@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import ProgressBar from "./ProgressBar/ProgressBar";
 import Card from "./Card/Card";
 import "./Cards.css";
+import { useNavigate } from "react-router-dom";
 
 const initialData = [
   {
@@ -285,6 +286,12 @@ const shuffleArray = (array) => {
 };
 
 const Cards = () => {
+  const navigate = useNavigate();
+  const handleReload = () => {
+    // Redirigir a la misma ruta
+    navigate(0); // esto recarga la ruta actual
+  };
+
   const [cards, setCards] = useState([]);
   const [betHistory, setBetHistory] = useState([]); // Historial de apuestas
   const [allSwiped, setAllSwiped] = useState(false); // Estado para saber si ya se deslizaron todas
@@ -336,10 +343,7 @@ const Cards = () => {
         {allSwiped ? (
           <div className="bet-summary">
             <h2>¡Todas las apuestas realizadas!</h2>
-            <button
-              onClick={() => window.location.reload()}
-              className="reset-button"
-            >
+            <button onClick={handleReload} className="reset-button">
               Jugar de Nuevo
             </button>
             <p>Historial de apuestas:</p>
