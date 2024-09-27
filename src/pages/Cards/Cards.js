@@ -370,12 +370,6 @@ const Cards = () => {
                 ))}
               </tbody>
             </table>
-            <button
-              onClick={() => window.location.reload()}
-              className="reset-button"
-            >
-              Jugar de Nuevo
-            </button>
           </div>
         ) : (
           <div className="card-stack">
