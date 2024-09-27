@@ -8,7 +8,7 @@ import "../Cards.css";
 const swipeConfig = {
   flickOnSwipe: true,
   swipeRequirementType: "distance",
-  swipeThreshold: 120,
+  swipeThreshold: 50,
   preventSwipe: ["up", "down"],
 };
 
