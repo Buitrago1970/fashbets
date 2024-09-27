@@ -180,3 +180,68 @@
 .swipe-button.right {
   color: red;
 }
+
+/* teams info */
+.teams-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.teams-info__teams {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.teams-info__team {
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+.teams-info__team-image {
+  width: 50px;
+  height: 50px;
+  object-fit: contain;
+  margin-bottom: 10px;
+}
+
+.teams-info__team-name {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.teams-info__team-score {
+  font-size: 16px;
+  margin-bottom: 5px;
+}
+
+.teams-info__time {
+  font-size: 14px;
+  color: gray;
+}
+
+/* bets info */
+.auth-info {
+  margin-top: 10px;
+  padding: 10px;
+  border-top: 1px solid #ccc;
+  text-align: center;
+  font-size: 14px;
+}
+
+.auth-info__bet-type {
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.auth-info__bet-for {
+  font-size: 15px;
+  margin-bottom: 5px;
+}
+
+.auth-info__odds {
+  font-size: 14px;
+  color: #007bff; /* Color que resalta la cuota */
+}
