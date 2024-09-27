@@ -9,7 +9,7 @@
   position: relative;
   width: 100%;
   max-width: 350px;
-  height: 500px;
+  height: 472px;
 }
 
 .swipe {
@@ -157,9 +157,9 @@
 .button-container {
   display: flex;
   justify-content: center;
-  margin-top: 10px;
   align-items: center;
   gap: 30px;
+  margin-bottom: 30px;
 }
 
 .swipe-button {
