@@ -17,34 +17,147 @@
   width: 100%;
   height: 100%;
 }
-
 .card {
-  background-color: #fff;
+  background: linear-gradient(180deg, #e3f2fd, #bbdefb, #90caf9);
+  border-radius: 25px;
+  padding: 10px 0;
+  padding-top: 25px;
+  width: 350px;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: "Arial", sans-serif;
+  color: #003366;
+}
+.card-container-progress {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 100%;
   height: 100%;
-  background-size: cover;
-  background-position: center;
-  border-radius: 20px;
-  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.3);
-  display: flex;
-  align-items: flex-end;
-  justify-content: center;
-  overflow: hidden;
-  transition: transform 0.3s ease-in-out;
+  padding: 20px 0;
+  padding-top: 10px;
 }
 
-.card h3 {
-  margin-bottom: 20px;
-  color: #fff;
-  text-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+.card__progress-bar {
+  width: 100%;
+  height: 8px;
+  background-color: #ff3645;
+  border-radius: 10px;
+  position: relative;
+  margin: 0px 20px 20px 20px;
 }
 
-.infoText {
+.card__progress-bar::before {
+  content: "";
+  width: 10%;
+  height: 8px;
+  background-color: #002361;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 10px;
+}
+
+.card__content {
+  width: 100%;
   text-align: center;
-  margin-top: 20px;
-  color: #555;
+  margin-bottom: 10px;
 }
 
+.card__content-header {
+  display: flex;
+  justify-content: space-between;
+  background: white;
+  padding: 5px 20px;
+  font-size: 12px;
+}
+.card__content-header-left {
+  display: flex;
+}
+
+.card__live {
+  color: red; /* Texto en rojo */
+  font-weight: bold;
+  margin-right: 15px;
+}
+
+.card__sport {
+  color: #003366;
+}
+
+.card__time {
+  color: #003366;
+}
+.card__teams {
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+  padding: 0px 23px;
+}
+.card__league {
+  font-size: 12px;
+  color: #777;
+  text-align: justify;
+}
+
+.card__score {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 25px;
+}
+
+.card__score-teams {
+  justify-content: space-around;
+  width: 100%;
+  flex-direction: column;
+  display: flex;
+  align-items: center;
+  margin: 15px 0;
+  gap: 10px;
+}
+
+.card__team {
+  text-align: center;
+  display: flex;
+  gap: 11%;
+  width: 100%;
+  justify-content: center;
+}
+
+.card__team-score {
+  font-size: 30px;
+  font-weight: bold;
+  color: #003366;
+  margin: 0;
+}
+
+.card__team-name {
+  font-size: 35px;
+  font-weight: bold;
+  color: #003366;
+  margin: 0;
+}
+
+.card__betting {
+  background-color: #3cb4e5;
+  padding: 10px 20px;
+  border-radius: 13px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 150px;
+  color: white;
+  height: 36px;
+}
+
+.card__betting-odds {
+  font-size: 25px;
+  font-weight: bold;
+  margin: 0;
+}
 @media (min-width: 768px) {
   .card-stack {
     max-width: 400px;

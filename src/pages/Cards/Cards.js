@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import TinderCard from "react-tinder-card";
-import "./Cards.css"; // Asegúrate de que este archivo CSS esté presente
+import "./Cards.css";
 
 const initialData = [
   { name: "Card 1", url: "https://via.placeholder.com/300x400?text=Card+1" },
@@ -36,54 +36,57 @@ const Cards = () => {
     preventSwipe: ["up", "down"],
   };
 
-  const getTransformStyle = (index) => {
-    switch (index) {
-      case 0:
-        return {
-          transform: "none",
-        };
-      case 1:
-        return {
-          transform: "scale(0.95) translateY(15px)",
-        };
-      case 2:
-        return {
-          transform: "scale(0.9) translateY(30px)",
-        };
-      default:
-        return {
-          transform: "scale(0.85) translateY(45px)",
-        };
-    }
-  };
-
   return (
     <div className="cards-container">
       <div className="card-stack">
-        {cards
-          .slice(0, 3)
-          .reverse()
-          .map((card, index) => {
-            const style = {
-              backgroundImage: `url(${card.url})`,
-              zIndex: cards.length - index,
-              ...getTransformStyle(index),
-            };
-
-            return (
-              <TinderCard
-                className="swipe"
-                key={card.name}
-                onSwipe={(dir) => onSwipe(dir, card.name)}
-                onCardLeftScreen={() => onCardLeftScreen(card.name)}
-                {...swipeConfig}
-              >
-                <div className="card" style={style}>
-                  <h3>{card.name}</h3>
+        {cards.map((card, index) => {
+          return (
+            <TinderCard
+              className="swipe"
+              key={card.name}
+              onSwipe={(dir) => onSwipe(dir, card.name)}
+              onCardLeftScreen={() => onCardLeftScreen(card.name)}
+              {...swipeConfig}
+            >
+              <div className="card">
+                <div className="card-container-progress">
+                  <div className="card__progress-bar"></div>
                 </div>
-              </TinderCard>
-            );
-          })}
+                <div className="card__content">
+                  <div className="card__content-header">
+                    <div className="card__content-header-left">
+                      <p className="card__live">En vivo</p>
+                      <p className="card__sport">Futbol</p>
+                    </div>
+                    <div className="card__content-header-right">
+                      <p className="card__time">75:35</p>
+                    </div>
+                  </div>
+                  <div className="card__teams">
+                    <div className="card__league">
+                      <p>Colombia / Liga BetPlay Dimayor</p>
+                    </div>
+                    <div className="card__score">
+                      <div className="card__score-teams">
+                        <div className="card__team">
+                          <p className="card__team-score">0</p>
+                          <p className="card__team-name">Arsenal</p>
+                        </div>
+                        <div className="card__team">
+                          <p className="card__team-score">1</p>
+                          <p className="card__team-name">Liverpool</p>
+                        </div>
+                      </div>
+                      <div className="card__betting">
+                        <p className="card__betting-odds">4.25</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </TinderCard>
+          );
+        })}
       </div>
     </div>
   );
