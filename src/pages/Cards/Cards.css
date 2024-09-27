@@ -31,6 +31,18 @@
   font-family: "Arial", sans-serif;
   color: #003366;
 }
+
+@media (max-width: 380px) {
+  .card {
+    width: 300px;
+    margin: auto;
+  }
+}
+@media (max-width: 300px) {
+  .card {
+    width: 270px;
+  }
+}
 .progress-container {
   background-color: #ff3645;
   border-radius: 5px;
