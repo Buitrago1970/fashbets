@@ -14,12 +14,14 @@ const initialData = [
       {
         name: "Arsenal",
         score: 0,
-        image: "https://link-to-arsenal-image.com/arsenal.png",
+        image:
+          "https://upload.wikimedia.org/wikipedia/en/thumb/5/53/Arsenal_FC.svg/1200px-Arsenal_FC.svg.png",
       },
       {
         name: "Liverpool",
         score: 1,
-        image: "https://link-to-liverpool-image.com/liverpool.png",
+        image:
+          "https://upload.wikimedia.org/wikipedia/en/thumb/0/0c/Liverpool_FC.svg/1200px-Liverpool_FC.svg.png",
       },
     ],
     bettingInfo: {
