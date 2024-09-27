@@ -343,9 +343,9 @@ const Cards = () => {
         {allSwiped ? (
           <div className="bet-summary">
             <h2>¡Todas las apuestas realizadas!</h2>
-            <button onClick={handleReload} className="reset-button">
+            {/* <button onClick={handleReload} className="reset-button">
               Jugar de Nuevo
-            </button>
+            </button> */}
             <p>Historial de apuestas:</p>
             <table className="bet-summary__table">
               <thead>
