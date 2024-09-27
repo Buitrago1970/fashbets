@@ -336,6 +336,12 @@ const Cards = () => {
         {allSwiped ? (
           <div className="bet-summary">
             <h2>¡Todas las apuestas realizadas!</h2>
+            <button
+              onClick={() => window.location.reload()}
+              className="reset-button"
+            >
+              Jugar de Nuevo
+            </button>
             <p>Historial de apuestas:</p>
             <table className="bet-summary__table">
               <thead>
@@ -364,6 +370,12 @@ const Cards = () => {
                 ))}
               </tbody>
             </table>
+            <button
+              onClick={() => window.location.reload()}
+              className="reset-button"
+            >
+              Jugar de Nuevo
+            </button>
           </div>
         ) : (
           <div className="card-stack">
