@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Outlet, Link } from "react-router-dom";
+import { Outlet, Link, useLocation } from "react-router-dom";
 import logo from "../assets/BetPlay-logo.png";
 import home from "../assets/home.svg";
 import cards from "../assets/CARDSBET.svg";
@@ -9,6 +9,7 @@ import "./Layout.css";
 
 const Layout = () => {
   const [sessionTime, setSessionTime] = useState(0);
+  const location = useLocation(); // Hook para obtener la ubicación actual
 
   useEffect(() => {
     const timer = setInterval(() => {
@@ -35,6 +36,21 @@ const Layout = () => {
             </div>
             <p className="menu-text">Menú</p>
           </Link>
+          {location.pathname === "/" && (
+            <div className="header-flashbet">
+              <Link to="/cards" className="header-flashbet-link">
+                <span className="new-label">new</span>
+                <div className="header-flashbet-logo">
+                  <img
+                    src={cards}
+                    alt="Betplay logo"
+                    className="logo-header-flashbet"
+                  />
+                </div>
+                <p className="header-flashbet-text">FlashBets</p>
+              </Link>
+            </div>
+          )}
         </div>
         <div className="header-bottom">
           <div className="user-info">
@@ -61,13 +77,13 @@ const Layout = () => {
             <p className="footer-text">Inicio</p>
           </Link>
         </div>
-
         <div className="footer-content">
-          <Link to="/cards" className="footer-link">
+          <Link to="/cards" className="footer-link cards-link flashbits-link">
+            <span className="new-label">new</span>
             <div className="footer-logo">
               <img src={cards} alt="Betplay logo" className="logo-footer" />
             </div>
-            <p className="footer-text">Apuestas</p>
+            <p className="footer-text">FlashBets</p>
           </Link>
         </div>
         <div className="footer-content">

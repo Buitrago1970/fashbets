@@ -27,11 +27,38 @@
 .header-top {
   display: flex;
   justify-content: center;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
+  gap: 30px;
+}
+.header-flashbet-link {
+  text-decoration: none;
+  color: inherit;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
   gap: 5px;
 }
-
+.header-flashbet-logo {
+  padding: 10px;
+  height: 26px;
+  width: 26px;
+  box-shadow: 0px 4px 2px rgb(0 0 0 / 6%);
+  border-radius: 50px;
+  background: #001849;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.header-flashbet {
+  position: relative;
+}
+.header-flashbet-text {
+  margin: 0;
+  font-size: 11px;
+  color: #ffffff;
+  text-decoration: none;
+}
 .logo-container {
   display: flex;
   align-items: center;
@@ -104,7 +131,6 @@
 
 .layout-main {
   flex: 1;
-  padding: 20px;
 }
 
 .layout-footer {
@@ -152,4 +178,36 @@
 }
 .logo-footer {
   height: 24px;
+}
+.new-label {
+  background-color: #ff0000;
+  color: #ffffff;
+  padding: 2px 5px;
+  font-size: 10px;
+  font-weight: bold;
+  border-radius: 5px;
+  margin-left: 5px;
+  position: absolute;
+  animation: bounce 2s infinite;
+  left: 31px;
+  top: -6px;
+}
+.flashbits-link {
+  position: relative;
+}
+/* Animación de salto */
+@keyframes bounce {
+  0%,
+  20%,
+  50%,
+  80%,
+  100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-5px);
+  }
+  60% {
+    transform: translateY(-3px);
+  }
 }

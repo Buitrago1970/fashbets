@@ -1,24 +1,13 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import home from "../../assets/home.png";
+import "./Home.css";
 
 export default function Home() {
   return (
     <>
-      <nav>
-        <ul>
-          <li>
-            <Link to="/">Home</Link>
-          </li>
-          <li>
-            <Link to="/cards">Cards</Link>
-          </li>
-          <li>
-            <Link to="/success">Success</Link>
-          </li>
-        </ul>
-      </nav>
-
-      <h1>Home</h1>
+      <div className="home-img">
+        <img src={home} alt="logo" />
+      </div>
     </>
   );
 }
