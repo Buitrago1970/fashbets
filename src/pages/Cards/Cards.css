@@ -179,3 +179,64 @@
 .approve-button {
   background-color: #52c41a; /* Color verde */
 }
+.timer-bar {
+  position: relative;
+  width: 100%;
+  height: 5px;
+  background-color: #ffffff;
+  margin-top: 10px;
+}
+
+.timer-progress {
+  position: absolute;
+  height: 100%;
+  background-color: #ff2a00; /* Color de la barra de progreso */
+  width: 0%;
+  transition: width 0.1s linear;
+}
+
+/* Estilos para el botón de historial */
+.history-button {
+  background-color: #ffc107; /* Color amarillo */
+  color: #000;
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  font-size: 16px;
+  position: relative;
+  cursor: pointer;
+}
+
+/* Estilos para el pop-up de historial */
+.history-popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.history-popup-content {
+  background-color: #fff;
+  width: 100%;
+  max-width: 500px;
+  height: 85%;
+  padding: 20px;
+  border-radius: 10px;
+  overflow-y: auto;
+}
+
+.history-popup-content h2 {
+  margin-top: 0;
+}
+
+.history-popup-content button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  cursor: pointer;
+}

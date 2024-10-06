@@ -1,8 +1,8 @@
-import React, { useState, useEffect } from "react";
-import ProgressBar from "./ProgressBar/ProgressBar";
+// Cards.js
+import React, { useState, useEffect, useRef } from "react";
 import Card from "./Card/Card";
 import "./Cards.css";
-import { useNavigate } from "react-router-dom";
+import HeaderTabs from "./HeaderTabs/HeaderTabs";
 
 const initialData = [
   {
@@ -277,6 +277,13 @@ const initialData = [
   },
 ];
 
+// Datos de ejemplo para cada categoría
+const siguiendoData = [];
+
+const recomendadoData = [];
+
+const enVivoData = [];
+
 const shuffleArray = (array) => {
   let newArray = [...array];
   for (let i = newArray.length - 1; i > 0; i--) {
@@ -287,20 +294,74 @@ const shuffleArray = (array) => {
 };
 
 const Cards = () => {
+  const [selectedTab, setSelectedTab] = useState("Siguiendo");
   const [cards, setCards] = useState([]);
   const [betHistory, setBetHistory] = useState([]);
-  const [allSwiped, setAllSwiped] = useState(false); // Estado para saber si ya se deslizaron todas
+  const [allSwiped, setAllSwiped] = useState(false);
+  const [timer, setTimer] = useState(0);
+  const [acceptedBetsCount, setAcceptedBetsCount] = useState(0);
+  const [showHistoryPopup, setShowHistoryPopup] = useState(false);
+
+  const timerRef = useRef(null);
 
   useEffect(() => {
-    const shuffledData = shuffleArray(initialData);
+    // Actualizar las tarjetas según la pestaña seleccionada
+    let data;
+    if (selectedTab === "Siguiendo") {
+      data = siguiendoData.length > 0 ? siguiendoData : initialData;
+    } else if (selectedTab === "Recomendado") {
+      data = recomendadoData.length > 0 ? recomendadoData : initialData;
+    } else if (selectedTab === "En vivo") {
+      data = enVivoData.length > 0 ? enVivoData : initialData;
+    }
+
+    const shuffledData = shuffleArray(data);
     setCards(shuffledData);
-  }, []);
+    setAllSwiped(false);
+    setTimer(0);
+    clearInterval(timerRef.current);
+    startTimer();
+  }, [selectedTab]);
+
+  useEffect(() => {
+    if (cards.length > 0) {
+      setTimer(0);
+      clearInterval(timerRef.current);
+      startTimer();
+    } else {
+      clearInterval(timerRef.current);
+    }
+  }, [cards]);
+
+  const startTimer = () => {
+    const duration = Math.floor(Math.random() * (20 - 10 + 1)) + 10; // Tiempo aleatorio entre 10 y 20 segundos
+    timerRef.current = setInterval(() => {
+      setTimer((prevTimer) => {
+        if (prevTimer >= duration) {
+          clearInterval(timerRef.current);
+          // Si el tiempo se agota y no se hizo swipe, se cancela la apuesta
+          onSwipe("timeout", cards[cards.length - 1]?.name);
+          return 0;
+        }
+        return prevTimer + 0.1; // Incrementa el timer cada 100ms
+      });
+    }, 100);
+  };
 
   const onSwipe = (direction, name) => {
+    if (!name) return; // Si no hay tarjeta, no hacer nada
     const swipedCard = cards.find((card) => card.name === name);
 
-    // Si se desliza a la izquierda, la apuesta es rechazada; si se desliza a la derecha, es aceptada
-    const betStatus = direction === "right" ? "Aprobada" : "Rechazada";
+    let betStatus = "Rechazada"; // Por defecto, se rechaza
+
+    if (direction === "right") {
+      betStatus = "Aprobada";
+      setAcceptedBetsCount((prevCount) => prevCount + 1); // Incrementa el contador de apuestas aceptadas
+    } else if (direction === "left") {
+      betStatus = "Rechazada";
+    } else if (direction === "timeout") {
+      betStatus = "Cancelada por tiempo";
+    }
 
     // Agregar la apuesta al historial con el estado correspondiente
     setBetHistory((prevHistory) => [
@@ -310,7 +371,7 @@ const Cards = () => {
         betType: swipedCard.bettingInfo.betType,
         betFor: swipedCard.bettingInfo.betFor,
         odds: swipedCard.bettingInfo.odds,
-        status: betStatus, // Estado de la apuesta (Aprobada o Rechazada)
+        status: betStatus,
       },
     ]);
 
@@ -327,9 +388,6 @@ const Cards = () => {
     });
   };
 
-  const totalCards = initialData.length;
-  const swipedCards = totalCards - cards.length;
-
   const swipeCard = (direction) => {
     if (cards.length === 0) return;
     const currentCard = cards[cards.length - 1];
@@ -337,8 +395,22 @@ const Cards = () => {
     onSwipe(direction, currentCard.name);
   };
 
+  const handleHistoryClick = () => {
+    setShowHistoryPopup(true);
+  };
+
+  const closeHistoryPopup = () => {
+    setShowHistoryPopup(false);
+  };
+
+  const progressPercentage = (timer / 25) * 100; // Asumiendo 20 segundos como máximo
+
   return (
     <>
+      {/* Encabezado con las opciones */}
+      <HeaderTabs selectedTab={selectedTab} setSelectedTab={setSelectedTab} />
+
+      {/* Contenedor de tarjetas */}
       <div className="cards-container">
         <div className="card-stack">
           {cards.map((card, index) => (
@@ -351,12 +423,8 @@ const Cards = () => {
           ))}
         </div>
       </div>
-      {allSwiped && (
-        <div className="no-more-cards">
-          <p>No hay más apuestas por revisar.</p>
-          <button>Recargar</button>
-        </div>
-      )}
+
+      {/* Botones de acción y botón de historial */}
       <div className="buttons-container">
         <button
           className="action-button reject-button"
@@ -370,7 +438,30 @@ const Cards = () => {
         >
           ✔
         </button>
+        <button className="history-button" onClick={handleHistoryClick}>
+          {acceptedBetsCount}
+        </button>
       </div>
+
+      {/* Barra de progreso del temporizador */}
+      <div className="timer-bar">
+        <div
+          className="timer-progress"
+          style={{ width: `${progressPercentage}%` }}
+        ></div>
+      </div>
+
+      {/* Pop-up de historial de apuestas */}
+      {showHistoryPopup && (
+        <div className="history-popup">
+          <div className="history-popup-content">
+            <h2>Historial de Apuestas</h2>
+            <p>¡Hola! ¡Este es el historial de apuestas!</p>
+            {/* Aquí puedes agregar más detalles de las apuestas aceptadas */}
+            <button onClick={closeHistoryPopup}>Cerrar</button>
+          </div>
+        </div>
+      )}
     </>
   );
 };

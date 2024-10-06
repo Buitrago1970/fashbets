@@ -1,0 +1,30 @@
+/* Estilos para el encabezado de pestañas */
+.header-tabs {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-bottom: 10px;
+  margin-top: 10px;
+  position: relative;
+}
+
+.tab-item {
+  position: relative;
+  padding: 10px 0;
+  cursor: pointer;
+  font-weight: bold;
+  color: #2f2f2f;
+}
+
+.tab-item.active {
+  color: #000;
+}
+
+.active-line {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background-color: #000;
+}
