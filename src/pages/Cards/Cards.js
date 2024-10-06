@@ -287,13 +287,8 @@ const shuffleArray = (array) => {
 };
 
 const Cards = () => {
-  const navigate = useNavigate();
-  const handleReload = () => {
-    navigate(0); // Esto recarga la ruta actual
-  };
-
   const [cards, setCards] = useState([]);
-  const [betHistory, setBetHistory] = useState([]); // Historial de apuestas
+  const [betHistory, setBetHistory] = useState([]);
   const [allSwiped, setAllSwiped] = useState(false); // Estado para saber si ya se deslizaron todas
 
   useEffect(() => {
@@ -334,7 +329,6 @@ const Cards = () => {
 
   const totalCards = initialData.length;
   const swipedCards = totalCards - cards.length;
-  const progress = (swipedCards / totalCards) * 100;
 
   const swipeCard = (direction) => {
     if (cards.length === 0) return;
@@ -345,7 +339,6 @@ const Cards = () => {
 
   return (
     <>
-      <ProgressBar progress={progress} />
       <div className="cards-container">
         <div className="card-stack">
           {cards.map((card, index) => (
@@ -361,7 +354,7 @@ const Cards = () => {
       {allSwiped && (
         <div className="no-more-cards">
           <p>No hay más apuestas por revisar.</p>
-          <button onClick={handleReload}>Recargar</button>
+          <button>Recargar</button>
         </div>
       )}
       <div className="buttons-container">

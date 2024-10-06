@@ -1,9 +1,7 @@
-// Card.js
 import React, { useRef } from "react";
 import gsap from "gsap";
 import CardHeader from "./CardHeader/CardHeader";
 import TeamsInfo from "./TeamsInfo/TeamsInfo";
-import AuthInfo from "./AuthInfo/AuthInfo";
 import "../Cards.css";
 
 function Card({ card, onSwipe, zIndex }) {
@@ -25,7 +23,7 @@ function Card({ card, onSwipe, zIndex }) {
     const clientX = e.type.includes("touch") ? e.touches[0].clientX : e.clientX;
     currentX.current = clientX - startX.current;
 
-    const rotation = (currentX.current / window.innerWidth) * 15; // Efecto de rotación
+    const rotation = (currentX.current / window.innerWidth) * 33; // Efecto de rotación
     gsap.to(cardRef.current, {
       x: currentX.current,
       rotation,
@@ -83,7 +81,6 @@ function Card({ card, onSwipe, zIndex }) {
           time={card.time}
           betFor={card.bettingInfo.betFor}
         />
-        <AuthInfo betInfo={card.bettingInfo} />
       </div>
     </div>
   );
