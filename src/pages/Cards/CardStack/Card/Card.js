@@ -2,7 +2,7 @@ import React, { useRef } from "react";
 import gsap from "gsap";
 import CardHeader from "./CardHeader/CardHeader";
 import TeamsInfo from "./TeamsInfo/TeamsInfo";
-import "../../Cards.css";
+import "./Card.css";
 
 function Card({ card, onSwipe, zIndex }) {
   const cardRef = useRef(null);
