@@ -1,8 +1,10 @@
-// Cards.js
 import React, { useState, useEffect, useRef } from "react";
-import Card from "./Card/Card";
-import "./Cards.css";
+
+// import Card from "./Card/Card";
 import HeaderTabs from "./HeaderTabs/HeaderTabs";
+import CardStack from "./CardStack/CardStack";
+
+import "./Cards.css";
 
 const initialData = [
   {
@@ -412,7 +414,7 @@ const Cards = () => {
 
       {/* Contenedor de tarjetas */}
       <div className="cards-container">
-        <div className="card-stack">
+        {/* <div className="card-stack">
           {cards.map((card, index) => (
             <Card
               key={card.name}
@@ -421,7 +423,8 @@ const Cards = () => {
               zIndex={cards.length - index}
             />
           ))}
-        </div>
+        </div> */}
+        <CardStack cards={cards} onSwipe={onSwipe} />
       </div>
 
       {/* Botones de acción y botón de historial */}
