@@ -1,12 +1,8 @@
-import React, { useEffect } from "react";
+import React from "react";
 import Card from "./Card/Card";
 import "./CardStack.css";
 
 function CardStack({ cards, onSwipe }) {
-  //   useEffect(() => {
-  //     // Puedes agregar lógica adicional si es necesario cuando cambian las tarjetas
-  //   }, [cards]);
-
   return (
     <div className="card-stack">
       {cards.map((card, index) => (

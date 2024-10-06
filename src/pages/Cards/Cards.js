@@ -3,6 +3,7 @@ import React, { useState, useEffect, useRef } from "react";
 // import Card from "./Card/Card";
 import HeaderTabs from "./HeaderTabs/HeaderTabs";
 import CardStack from "./CardStack/CardStack";
+import ActionButtons from "./ActionButtons/ActionButtons";
 
 import "./Cards.css";
 
@@ -414,37 +415,15 @@ const Cards = () => {
 
       {/* Contenedor de tarjetas */}
       <div className="cards-container">
-        {/* <div className="card-stack">
-          {cards.map((card, index) => (
-            <Card
-              key={card.name}
-              card={card}
-              onSwipe={onSwipe}
-              zIndex={cards.length - index}
-            />
-          ))}
-        </div> */}
         <CardStack cards={cards} onSwipe={onSwipe} />
       </div>
 
       {/* Botones de acción y botón de historial */}
-      <div className="buttons-container">
-        <button
-          className="action-button reject-button"
-          onClick={() => swipeCard("left")}
-        >
-          X
-        </button>
-        <button
-          className="action-button approve-button"
-          onClick={() => swipeCard("right")}
-        >
-          ✔
-        </button>
-        <button className="history-button" onClick={handleHistoryClick}>
-          {acceptedBetsCount}
-        </button>
-      </div>
+      <ActionButtons
+        swipeCard={swipeCard}
+        acceptedBetsCount={acceptedBetsCount}
+        handleHistoryClick={handleHistoryClick}
+      />
 
       {/* Barra de progreso del temporizador */}
       <div className="timer-bar">

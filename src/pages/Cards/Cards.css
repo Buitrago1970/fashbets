@@ -47,96 +47,6 @@
   text-align: center;
 }
 
-/* botones */
-.buttons-container {
-  display: flex;
-  justify-content: space-around;
-  margin-top: 20px;
-  width: 100%;
-}
-
-.swipe-button {
-  background-color: #002361; /* Color azul oscuro */
-  color: white;
-  font-size: 16px;
-  padding: 10px 20px;
-  border-radius: 5px;
-  border: none;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-
-.swipe-button.left {
-  background-color: #d32f2f; /* Rojo para el botón de deslizar a la izquierda */
-}
-
-.swipe-button.right {
-  background-color: #007bff; /* Azul para el botón de deslizar a la derecha */
-}
-
-.swipe-button:hover {
-  background-color: #555; /* Cambia a un gris oscuro al hacer hover */
-}
-.bet-summary {
-  text-align: center;
-  margin-top: 20px;
-}
-
-.bet-summary h2 {
-  font-size: 24px;
-  margin-bottom: 10px;
-}
-
-.bet-summary__table {
-  width: 100%;
-  border-collapse: collapse;
-  margin-top: 20px;
-  font-size: 16px;
-}
-
-.bet-summary__table th,
-.bet-summary__table td {
-  padding: 12px 15px;
-  text-align: center;
-  border-bottom: 1px solid #ddd;
-}
-
-.bet-summary__table th {
-  background-color: #002361; /* Fondo oscuro para los encabezados */
-  color: white;
-}
-
-.bet-summary__row.approved {
-  background-color: #e8f5e9; /* Verde suave para apuestas aprobadas */
-  color: #388e3c; /* Texto verde oscuro */
-}
-
-.bet-summary__row.rejected {
-  background-color: #ffebee; /* Rojo suave para apuestas rechazadas */
-  color: #d32f2f; /* Texto rojo oscuro */
-}
-
-.bet-summary__row td {
-  transition: background-color 0.3s ease;
-}
-
-.bet-summary__row:hover {
-  background-color: #f1f1f1; /* Color de fondo al hacer hover */
-}
-/* Cards.css */
-
-/* Estilos para el botón de reinicio */
-.reset-button {
-  margin-top: 20px;
-  padding: 10px 20px;
-  background-color: #4caf50; /* Verde */
-  color: white;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  font-size: 16px;
-}
-
 .reset-button:hover {
   background-color: #45a049; /* Verde más oscuro al pasar el mouse */
 }
@@ -145,40 +55,6 @@
   position: relative;
 }
 
-/* Contenedor de los botones */
-.buttons-container {
-  display: flex;
-  justify-content: center;
-  margin-bottom: 50px;
-}
-
-/* Estilos generales para los botones */
-.action-button {
-  width: 70px;
-  height: 70px;
-  border-radius: 50%;
-  font-size: 30px;
-  color: #fff;
-  border: none;
-  margin: 0 20px;
-  cursor: pointer;
-  background-color: #ccc;
-  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: transform 0.2s;
-}
-
-/* Botón de rechazo (X) */
-.reject-button {
-  background-color: #ff4d4f; /* Color rojo */
-}
-
-/* Botón de aprobación (✔) */
-.approve-button {
-  background-color: #52c41a; /* Color verde */
-}
 .timer-bar {
   position: relative;
   width: 100%;
@@ -193,19 +69,6 @@
   background-color: #ff2a00; /* Color de la barra de progreso */
   width: 0%;
   transition: width 0.1s linear;
-}
-
-/* Estilos para el botón de historial */
-.history-button {
-  background-color: #ffc107; /* Color amarillo */
-  color: #000;
-  border: none;
-  border-radius: 50%;
-  width: 40px;
-  height: 40px;
-  font-size: 16px;
-  position: relative;
-  cursor: pointer;
 }
 
 /* Estilos para el pop-up de historial */
