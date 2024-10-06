@@ -4,6 +4,7 @@ import React, { useState, useEffect, useRef } from "react";
 import HeaderTabs from "./HeaderTabs/HeaderTabs";
 import CardStack from "./CardStack/CardStack";
 import ActionButtons from "./ActionButtons/ActionButtons";
+import TimerBar from "./TimerBar/TimerBar";
 
 import "./Cards.css";
 
@@ -406,7 +407,7 @@ const Cards = () => {
     setShowHistoryPopup(false);
   };
 
-  const progressPercentage = (timer / 25) * 100; // Asumiendo 20 segundos como máximo
+  const progressPercentage = (timer / 20) * 100;
 
   return (
     <>
@@ -426,12 +427,7 @@ const Cards = () => {
       />
 
       {/* Barra de progreso del temporizador */}
-      <div className="timer-bar">
-        <div
-          className="timer-progress"
-          style={{ width: `${progressPercentage}%` }}
-        ></div>
-      </div>
+      <TimerBar progressPercentage={progressPercentage} />
 
       {/* Pop-up de historial de apuestas */}
       {showHistoryPopup && (
@@ -439,7 +435,6 @@ const Cards = () => {
           <div className="history-popup-content">
             <h2>Historial de Apuestas</h2>
             <p>¡Hola! ¡Este es el historial de apuestas!</p>
-            {/* Aquí puedes agregar más detalles de las apuestas aceptadas */}
             <button onClick={closeHistoryPopup}>Cerrar</button>
           </div>
         </div>

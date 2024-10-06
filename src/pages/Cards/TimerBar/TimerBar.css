@@ -1,0 +1,7 @@
+.timer-progress {
+  position: absolute;
+  height: 100%;
+  background-color: #ff2a00; /* Color de la barra de progreso */
+  width: 0%;
+  transition: width 0.1s linear;
+}
