@@ -289,8 +289,7 @@ const shuffleArray = (array) => {
 const Cards = () => {
   const navigate = useNavigate();
   const handleReload = () => {
-    // Redirigir a la misma ruta
-    navigate(0); // esto recarga la ruta actual
+    navigate(0); // Esto recarga la ruta actual
   };
 
   const [cards, setCards] = useState([]);
@@ -337,56 +336,47 @@ const Cards = () => {
   const swipedCards = totalCards - cards.length;
   const progress = (swipedCards / totalCards) * 100;
 
+  const swipeCard = (direction) => {
+    if (cards.length === 0) return;
+    const currentCard = cards[cards.length - 1];
+
+    onSwipe(direction, currentCard.name);
+  };
+
   return (
     <>
       <ProgressBar progress={progress} />
       <div className="cards-container">
-        {allSwiped ? (
-          <div className="bet-summary">
-            <h2>¡Todas las apuestas realizadas!</h2>
-            {/* <button onClick={handleReload} className="reset-button">
-              Jugar de Nuevo
-            </button> */}
-            <p>Historial de apuestas:</p>
-            <table className="bet-summary__table">
-              <thead>
-                <tr>
-                  <th>Partido</th>
-                  <th>Tipo de apuesta</th>
-                  <th>A favor de</th>
-                  <th>Cuota</th>
-                  <th>Estado</th>
-                </tr>
-              </thead>
-              <tbody>
-                {betHistory.map((bet, index) => (
-                  <tr
-                    key={index}
-                    className={`bet-summary__row ${
-                      bet.status === "Aprobada" ? "approved" : "rejected"
-                    }`}
-                  >
-                    <td>{bet.match}</td>
-                    <td>{bet.betType}</td>
-                    <td>{bet.betFor}</td>
-                    <td>{bet.odds}</td>
-                    <td>{bet.status}</td>
-                  </tr>
-                ))}
-              </tbody>
-            </table>
-          </div>
-        ) : (
-          <div className="card-stack">
-            {cards.map((card) => (
-              <Card key={card.name} card={card} onSwipe={onSwipe} />
-            ))}
-          </div>
-        )}
+        <div className="card-stack">
+          {cards.map((card, index) => (
+            <Card
+              key={card.name}
+              card={card}
+              onSwipe={onSwipe}
+              zIndex={cards.length - index}
+            />
+          ))}
+        </div>
       </div>
+      {allSwiped && (
+        <div className="no-more-cards">
+          <p>No hay más apuestas por revisar.</p>
+          <button onClick={handleReload}>Recargar</button>
+        </div>
+      )}
       <div className="buttons-container">
-        <button className="action-button reject-button">X</button>
-        <button className="action-button approve-button">✔</button>
+        <button
+          className="action-button reject-button"
+          onClick={() => swipeCard("left")}
+        >
+          X
+        </button>
+        <button
+          className="action-button approve-button"
+          onClick={() => swipeCard("right")}
+        >
+          ✔
+        </button>
       </div>
     </>
   );
