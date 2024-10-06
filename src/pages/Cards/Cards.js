@@ -5,6 +5,7 @@ import HeaderTabs from "./HeaderTabs/HeaderTabs";
 import CardStack from "./CardStack/CardStack";
 import ActionButtons from "./ActionButtons/ActionButtons";
 import TimerBar from "./TimerBar/TimerBar";
+import HistoryPopup from "./HistoryPopup/HistoryPopup";
 
 import "./Cards.css";
 
@@ -431,13 +432,10 @@ const Cards = () => {
 
       {/* Pop-up de historial de apuestas */}
       {showHistoryPopup && (
-        <div className="history-popup">
-          <div className="history-popup-content">
-            <h2>Historial de Apuestas</h2>
-            <p>¡Hola! ¡Este es el historial de apuestas!</p>
-            <button onClick={closeHistoryPopup}>Cerrar</button>
-          </div>
-        </div>
+        <HistoryPopup
+          betHistory={betHistory}
+          closeHistoryPopup={closeHistoryPopup}
+        />
       )}
     </>
   );
