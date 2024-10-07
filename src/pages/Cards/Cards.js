@@ -28,7 +28,7 @@ const shuffleArray = (array) => {
 };
 
 const Cards = () => {
-  const [selectedTab, setSelectedTab] = useState("Recomendado");
+  const [selectedTab, setSelectedTab] = useState("Siguiendo");
   const [cards, setCards] = useState([]);
   const [betHistory, setBetHistory] = useState([]);
   const [allSwiped, setAllSwiped] = useState(false);
@@ -61,7 +61,7 @@ const Cards = () => {
     setTimer(0);
     clearInterval(timerRef.current);
     startTimer();
-  }, [selectedTab]);
+  }, [selectedTab, initialData]);
 
   useEffect(() => {
     if (cards.length > 0) {

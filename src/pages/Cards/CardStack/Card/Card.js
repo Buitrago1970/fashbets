@@ -45,7 +45,7 @@ function Card({ card, onSwipe, zIndex }) {
         duration: 0.5,
         onComplete: () => {
           onSwipe(direction, card.name);
-          gsap.set(cardRef.current, { x: 0, rotation: 0 });
+          // No restablezcas la posición aquí
         },
       });
     } else {

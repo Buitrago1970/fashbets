@@ -1,6 +1,6 @@
 [
   {
-    "id": 1,
+    "name": 1,
     "bet": "¿Ganará El Real Madrid?",
     "odds": 1.5,
     "mainImage": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSf5VMOvn3uJgjIl_mzbbNawTP3-eFmYqNyig&s",
@@ -20,6 +20,121 @@
     ],
     "bettingInfo": {
       "price": 1000
+    }
+  },
+  {
+    "name": 2,
+    "bet": "¿Habrá más de 2.5 goles en el partido?",
+    "odds": 1.8,
+    "mainImage": "https://example.com/match_image.jpg",
+    "date": "Mañana, 5:30 PM",
+    "sport": "Fútbol",
+    "teams": [
+      {
+        "name": "Manchester United",
+        "score": 1,
+        "image": "https://upload.wikimedia.org/wikipedia/en/7/7a/Manchester_United_FC_crest.svg"
+      },
+      {
+        "name": "Liverpool",
+        "score": 1,
+        "image": "https://upload.wikimedia.org/wikipedia/en/0/0c/Liverpool_FC.svg"
+      }
+    ],
+    "bettingInfo": {
+      "price": 1500
+    }
+  },
+  {
+    "name": 3,
+    "bet": "¿Marcará Lionel Messi durante el partido?",
+    "odds": 2.2,
+    "mainImage": "https://example.com/player_image.jpg",
+    "date": "Hoy, 7:00 PM",
+    "sport": "Fútbol",
+    "teams": [
+      {
+        "name": "PSG",
+        "score": 3,
+        "image": "https://upload.wikimedia.org/wikipedia/en/a/a7/Paris_Saint-Germain_F.C..svg"
+      },
+      {
+        "name": "Lyon",
+        "score": 0,
+        "image": "https://upload.wikimedia.org/wikipedia/en/c/c6/Logo_Olympique_Lyonnais.svg"
+      }
+    ],
+    "bettingInfo": {
+      "price": 2000
+    }
+  },
+  {
+    "name": 4,
+    "bet": "¿Habrá un gol en los primeros 20 minutos?",
+    "odds": 1.6,
+    "mainImage": "https://example.com/goal_image.jpg",
+    "date": "Hoy, 9:00 PM",
+    "sport": "Fútbol",
+    "teams": [
+      {
+        "name": "Atlético de Madrid",
+        "score": 1,
+        "image": "https://upload.wikimedia.org/wikipedia/en/f/f4/Atletico_Madrid_2017_logo.svg"
+      },
+      {
+        "name": "Sevilla",
+        "score": 1,
+        "image": "https://upload.wikimedia.org/wikipedia/en/8/86/Sevilla_cf_200px.png"
+      }
+    ],
+    "bettingInfo": {
+      "price": 1200
+    }
+  },
+  {
+    "name": 5,
+    "bet": "¿Recibirán ambos equipos tarjetas amarillas?",
+    "odds": 1.9,
+    "mainImage": "https://example.com/yellow_card.jpg",
+    "date": "Mañana, 6:00 PM",
+    "sport": "Fútbol",
+    "teams": [
+      {
+        "name": "Juventus",
+        "score": 0,
+        "image": "https://upload.wikimedia.org/wikipedia/commons/2/2d/Juventus_FC_2017_logo.svg"
+      },
+      {
+        "name": "Inter de Milán",
+        "score": 0,
+        "image": "https://upload.wikimedia.org/wikipedia/en/0/0c/FC_Internazionale_Milano_2021.svg"
+      }
+    ],
+    "bettingInfo": {
+      "price": 1800
+    }
+  },
+  {
+    "name": 6,
+    "bet": "¿Habrá un penalti durante el partido?",
+    "odds": 2.1,
+    "mainImage": "https://example.com/penalty_image.jpg",
+    "date": "Hoy, 10:30 PM",
+    "sport": "Fútbol",
+    "teams": [
+      {
+        "name": "Bayern Múnich",
+        "score": 4,
+        "image": "https://upload.wikimedia.org/wikipedia/commons/1/1b/FC_Bayern_München_logo_%282017%29.svg"
+      },
+      {
+        "name": "Borussia Dortmund",
+        "score": 3,
+        "image": "https://upload.wikimedia.org/wikipedia/commons/6/67/Borussia_Dortmund_logo.svg"
+      }
+    ],
+    "bettingInfo": {
+      "price": 2500
     }
   }
 ]
