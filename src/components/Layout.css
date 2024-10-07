@@ -11,7 +11,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 12px 20px;
+  padding: 8px;
   border-radius: 0px 0px 10px 10px;
   box-shadow: 0px 4px 2px rgb(0 0 0 / 6%);
 }
@@ -63,14 +63,14 @@
   display: flex;
   align-items: center;
   background: #001849;
-  width: 43px;
-  height: 43px;
+  width: 20px;
+  height: 20px;
   border-radius: 50px;
   justify-content: center;
 }
 
 .logo {
-  height: 25px;
+  height: 15px;
 }
 
 .menu-text {
@@ -83,7 +83,6 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-top: 10px;
   gap: 15px;
 }
 
@@ -91,21 +90,21 @@
   display: flex;
   flex-direction: column;
   align-items: flex-end;
-  gap: 4px;
+  gap: 1px;
   p {
     margin: 0;
   }
 }
 
 .user-name {
-  font-size: 16px;
+  font-size: 12px;
   font-weight: bold;
   margin-bottom: 4px;
 }
 
 .session-text,
 .session-time {
-  font-size: 11px;
+  font-size: 10px;
   color: #6c757d;
 }
 
@@ -114,9 +113,9 @@
   align-items: flex-end;
   background: #001849;
   flex-direction: column;
-  padding: 4px;
+  padding: 2px;
   border-radius: 10px;
-  font-size: 14px;
+  font-size: 11px;
   font-weight: bold;
 }
 
