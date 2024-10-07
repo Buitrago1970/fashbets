@@ -55,7 +55,7 @@ function Card({ card, onSwipe, zIndex }) {
     currentX.current = 0;
   };
 
-  const offsetY = zIndex * 3;
+  const offsetY = zIndex * 0;
 
   return (
     <div

@@ -89,10 +89,10 @@ const Cards = () => {
   };
 
   const onSwipe = (direction, name) => {
-    if (!name) return; // Si no hay tarjeta, no hacer nada
+    if (!name) return;
     const swipedCard = cards.find((card) => card.name === name);
 
-    let betStatus = "Rechazada"; // Por defecto, se rechaza
+    let betStatus = "Rechazada";
 
     if (direction === "right") {
       betStatus = "Aprobada";
@@ -163,7 +163,9 @@ const Cards = () => {
       />
 
       {/* Barra de progreso del temporizador */}
-      <TimerBar progressPercentage={progressPercentage} />
+      <div className="timer-conatainer">
+        <TimerBar progressPercentage={progressPercentage} />
+      </div>
 
       {/* Pop-up de historial de apuestas */}
       {showHistoryPopup && (

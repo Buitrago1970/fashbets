@@ -11,7 +11,7 @@
   font-weight: 700;
   line-height: normal;
   font-weight: bold;
-  width: 85%;
+  width: 90%;
   margin: auto;
 }
 
@@ -26,12 +26,20 @@
   text-decoration: underline;
   margin: 20px 0;
 }
+.card__content-teams-info-container-main-image {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 .card__content-teams-info-main-image img {
   width: 100%;
   height: auto; /* Esto mantendrá la proporción de la imagen */
   object-fit: cover; /* Asegura que la imagen se ajuste bien al contenedor */
-  max-width: 100%; /* Evita que la imagen sea más grande que el contenedor */
-  max-height: 100%; /* Controla el alto máximo si es necesario */
+  max-width: 100%;
+  max-height: 100%;
+  border-radius: 8px;
 }
 .card__content-teams-info-main-image {
   width: 150px;
@@ -53,6 +61,7 @@
   font-style: normal;
   font-weight: 500;
   line-height: normal;
+  margin-top: 5px;
 }
 .card__content-teams-info-teams {
   display: flex;
@@ -126,4 +135,80 @@
   font-style: normal;
   font-weight: 700;
   line-height: normal;
+}
+@media (max-width: 380px) {
+  .card__content-teams-info {
+    width: 100%;
+  }
+
+  .card__content-teams-info-bet {
+    font-size: 24px;
+    width: 100%;
+    margin: 0;
+  }
+
+  .card__content-teams-info-odds {
+    font-size: 18px;
+    margin: 10px 0;
+  }
+
+  .card__content-teams-info-container-main-image {
+    width: 100%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .card__content-teams-info-main-image {
+    width: 100px;
+    height: 100px;
+  }
+
+  .card__content-teams-info-main-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .card__content-teams-info-date {
+    font-size: 12px;
+  }
+
+  /* .card__content-teams-info-teams {
+    flex-direction: column;
+    margin: 10px 5px;
+  } */
+
+  .card__content-teams-info-teams-team {
+    margin-bottom: 10px;
+  }
+
+  .card__content-teams-info-teams-team img {
+    width: 30px;
+    height: 30px;
+  }
+
+  .card__content-teams-info-teams-team div {
+    font-size: 12px;
+  }
+
+  .card__content-teams-container-info-button {
+    margin-top: 15px;
+  }
+
+  .card__content-teams-info-button {
+    padding: 5px 10px;
+    font-size: 10px;
+    margin-bottom: 20px;
+  }
+
+  .card__content-teams-info-price p {
+    padding: 8px 15px;
+    font-size: 12px;
+  }
+
+  .card__content-teams-info-potential-payment {
+    font-size: 24px;
+  }
 }

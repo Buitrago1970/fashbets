@@ -2,6 +2,15 @@
   position: relative;
   width: 100%;
   max-width: 400px;
-  height: 632px;
+  min-height: 700px;
   margin: auto;
+}
+@media (max-width: 380px) {
+  .card-stack {
+    position: relative;
+    width: 100%;
+    max-width: 400px;
+    min-height: 600px;
+    margin: auto;
+  }
 }

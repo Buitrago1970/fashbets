@@ -19,7 +19,7 @@
       }
     ],
     "bettingInfo": {
-      "price": 1000
+      "price": 500
     }
   },
   {
@@ -42,7 +42,7 @@
       }
     ],
     "bettingInfo": {
-      "price": 1500
+      "price": 500
     }
   },
   {
@@ -61,16 +61,16 @@
       {
         "name": "Lyon",
         "score": 0,
-        "image": "https://upload.wikimedia.org/wikipedia/en/c/c6/Logo_Olympique_Lyonnais.svg"
+        "image": "https://upload.wikimedia.org/wikipedia/en/thumb/1/1c/Olympique_Lyonnais_logo.svg/1200px-Olympique_Lyonnais_logo.svg.png"
       }
     ],
     "bettingInfo": {
-      "price": 2000
+      "price": 500
     }
   },
   {
     "name": 4,
-    "bet": "¿Habrá un gol en los primeros 20 minutos?",
+    "bet": "¿Habrá un gol en los primeros 10 minutos?",
     "odds": 1.6,
     "mainImage": "https://thumbs.dreamstime.com/b/minutes-clock-icon-interface-programs-applications-goal-setting-motivation-time-management-segment-part-hour-cartoon-273990837.jpg",
     "date": "Hoy, 9:00 PM",
@@ -79,39 +79,39 @@
       {
         "name": "Atlético de Madrid",
         "score": 1,
-        "image": "https://upload.wikimedia.org/wikipedia/en/f/f4/Atletico_Madrid_2017_logo.svg"
+        "image": "https://upload.wikimedia.org/wikipedia/en/thumb/f/f9/Atletico_Madrid_Logo_2024.svg/640px-Atletico_Madrid_Logo_2024.svg.png"
       },
       {
         "name": "Sevilla",
         "score": 1,
-        "image": "https://upload.wikimedia.org/wikipedia/en/8/86/Sevilla_cf_200px.png"
+        "image": "https://upload.wikimedia.org/wikipedia/it/2/2d/Sevilla_fc.png"
       }
     ],
     "bettingInfo": {
-      "price": 1200
+      "price": 500
     }
   },
   {
     "name": 5,
     "bet": "¿Recibirán ambos equipos tarjetas amarillas?",
     "odds": 1.9,
-    "mainImage": "https://assets.sportsboom.com/A_referee_s_hand_showing_a_yellow_card_in_football_Ian_Burt_a45e68e69c.jpg",
+    "mainImage": "../../assets/amarillo.jpeg",
     "date": "Mañana, 6:00 PM",
     "sport": "Fútbol",
     "teams": [
       {
         "name": "Juventus",
         "score": 0,
-        "image": "https://upload.wikimedia.org/wikipedia/commons/2/2d/Juventus_FC_2017_logo.svg"
+        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a8/Juventus_FC_-_pictogram_black_%28Italy%2C_2017%29.svg/800px-Juventus_FC_-_pictogram_black_%28Italy%2C_2017%29.svg.png"
       },
       {
         "name": "Inter de Milán",
         "score": 0,
-        "image": "https://upload.wikimedia.org/wikipedia/en/0/0c/FC_Internazionale_Milano_2021.svg"
+        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/FC_Internazionale_Milano_2021.svg/160px-FC_Internazionale_Milano_2021.svg.png"
       }
     ],
     "bettingInfo": {
-      "price": 1800
+      "price": 500
     }
   },
   {
@@ -134,30 +134,30 @@
       }
     ],
     "bettingInfo": {
-      "price": 2500
+      "price": 500
     }
   },
   {
     "name": 7,
-    "bet": "¿El equipo B anotará en ambas mitades?",
+    "bet": "¿El equipo Millonarios anotará en ambas mitades?",
     "odds": 2.0,
     "mainImage": "https://example.com/both_halves.jpg",
     "date": "Mañana, 3:00 PM",
     "sport": "Fútbol",
     "teams": [
       {
-        "name": "Chelsea",
+        "name": "Millonarios",
         "score": 1,
         "image": "https://upload.wikimedia.org/wikipedia/en/c/cc/Chelsea_FC.svg"
       },
       {
-        "name": "Tottenham",
+        "name": "Nacional",
         "score": 0,
         "image": "https://upload.wikimedia.org/wikipedia/en/b/b4/Tottenham_Hotspur.svg"
       }
     ],
     "bettingInfo": {
-      "price": 1300
+      "price": 500
     }
   },
   {
@@ -171,7 +171,7 @@
       {
         "name": "Napoli",
         "score": 2,
-        "image": "https://upload.wikimedia.org/wikipedia/en/2/28/S.S.C._Napoli_logo.svg"
+        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4e/Logo_SSD_Napoli_Femminile_%282021%29.png/800px-Logo_SSD_Napoli_Femminile_%282021%29.png"
       },
       {
         "name": "AC Milan",
@@ -180,12 +180,12 @@
       }
     ],
     "bettingInfo": {
-      "price": 1400
+      "price": 500
     }
   },
   {
     "name": 9,
-    "bet": "¿Anotará el equipo A en la primera mitad?",
+    "bet": "¿Anotará el equipo Ajax en la primera mitad?",
     "odds": 1.9,
     "mainImage": "https://example.com/first_half_goal.jpg",
     "date": "Hoy, 6:30 PM",
@@ -199,11 +199,11 @@
       {
         "name": "Feyenoord",
         "score": 0,
-        "image": "https://upload.wikimedia.org/wikipedia/en/c/c7/Feyenoord_logo.svg"
+        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f9/Feyenoord_logo_since_2024.svg/160px-Feyenoord_logo_since_2024.svg.png"
       }
     ],
     "bettingInfo": {
-      "price": 1700
+      "price": 500
     }
   },
   {
@@ -217,21 +217,21 @@
       {
         "name": "Valencia",
         "score": 0,
-        "image": "https://upload.wikimedia.org/wikipedia/en/c/ce/Valencia_CF_logo.svg"
+        "image": "https://upload.wikimedia.org/wikipedia/en/thumb/c/ce/Valenciacf.svg/1200px-Valenciacf.svg.png"
       },
       {
         "name": "Villarreal",
         "score": 0,
-        "image": "https://upload.wikimedia.org/wikipedia/en/7/70/Villarreal_CF_logo.svg"
+        "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRL9PLyYnVVqe-XnFyf_D6ihUjuS8fE7DBJXQ&s"
       }
     ],
     "bettingInfo": {
-      "price": 2000
+      "price": 500
     }
   },
   {
     "name": 11,
-    "bet": "¿El jugador Y será sustituido durante el partido?",
+    "bet": "¿El jugador Paulo Dybala será sustituido durante el partido?",
     "odds": 1.8,
     "mainImage": "https://example.com/substitution.jpg",
     "date": "Hoy, 4:00 PM",
@@ -245,11 +245,11 @@
       {
         "name": "Lazio",
         "score": 1,
-        "image": "https://upload.wikimedia.org/wikipedia/en/e/eb/S.S._Lazio_logo.svg"
+        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/37/S.S._Lazio_logo.svg/130px-S.S._Lazio_logo.svg.png"
       }
     ],
     "bettingInfo": {
-      "price": 1600
+      "price": 500
     }
   },
   {
@@ -263,7 +263,7 @@
       {
         "name": "Porto",
         "score": 1,
-        "image": "https://upload.wikimedia.org/wikipedia/en/4/4c/FC_Porto.svg"
+        "image": "https://upload.wikimedia.org/wikipedia/en/thumb/f/f1/FC_Porto.svg/1200px-FC_Porto.svg.png"
       },
       {
         "name": "Benfica",
@@ -272,7 +272,7 @@
       }
     ],
     "bettingInfo": {
-      "price": 2100
+      "price": 500
     }
   },
   {
@@ -286,21 +286,21 @@
       {
         "name": "Atalanta",
         "score": 1,
-        "image": "https://upload.wikimedia.org/wikipedia/en/4/47/Atalanta_BC.svg"
+        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/81/Logo_Atalanta_Bergamo.svg/1200px-Logo_Atalanta_Bergamo.svg.png"
       },
       {
         "name": "Sampdoria",
         "score": 0,
-        "image": "https://upload.wikimedia.org/wikipedia/en/6/6e/U.C._Sampdoria_logo.svg"
+        "image": "https://upload.wikimedia.org/wikipedia/sco/f/f7/Sampdoria_badge.png"
       }
     ],
     "bettingInfo": {
-      "price": 2400
+      "price": 500
     }
   },
   {
     "name": 14,
-    "bet": "¿El equipo B ganará por más de 1 gol?",
+    "bet": "¿El equipo Bayer ganará por más de 1 gol?",
     "odds": 1.7,
     "mainImage": "https://example.com/win_by_2_goals.jpg",
     "date": "Hoy, 7:30 PM",
@@ -309,7 +309,7 @@
       {
         "name": "Bayer Leverkusen",
         "score": 2,
-        "image": "https://upload.wikimedia.org/wikipedia/en/3/3a/Bayer_04_Leverkusen_logo.svg"
+        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/FC_Bayern_M%C3%BCnchen_logo_%282017%29.svg/160px-FC_Bayern_M%C3%BCnchen_logo_%282017%29.svg.png"
       },
       {
         "name": "RB Leipzig",
@@ -318,7 +318,7 @@
       }
     ],
     "bettingInfo": {
-      "price": 1900
+      "price": 500
     }
   },
   {
@@ -332,16 +332,16 @@
       {
         "name": "Marseille",
         "score": 1,
-        "image": "https://upload.wikimedia.org/wikipedia/en/f/f6/Olympique_de_Marseille_logo.svg"
+        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d8/Olympique_Marseille_logo.svg/1200px-Olympique_Marseille_logo.svg.png"
       },
       {
         "name": "Lille",
         "score": 0,
-        "image": "https://upload.wikimedia.org/wikipedia/en/8/8f/LOSC_Lille_logo.svg"
+        "image": "https://upload.wikimedia.org/wikipedia/en/thumb/3/3f/Lille_OSC_2018_logo.svg/800px-Lille_OSC_2018_logo.svg.png"
       }
     ],
     "bettingInfo": {
-      "price": 2500
+      "price": 500
     }
   }
 ]

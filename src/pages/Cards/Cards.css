@@ -5,3 +5,9 @@
   margin: 50px 0;
   margin-bottom: 107px;
 }
+.timer-conatainer {
+  display: flex;
+  justify-content: center;
+  margin: 25px 0;
+  margin-bottom: 30;
+}
