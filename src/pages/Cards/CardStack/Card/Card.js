@@ -77,9 +77,12 @@ function Card({ card, onSwipe, zIndex }) {
       <div className="card__content">
         <CardHeader sport={card.sport} />
         <TeamsInfo
+          bet={card.bet}
+          odds={card.odds}
+          mainImage={card.mainImage}
+          date={card.date}
           teams={card.teams}
-          time={card.time}
-          betFor={card.bettingInfo.betFor}
+          price={card.bettingInfo.price}
         />
       </div>
     </div>
