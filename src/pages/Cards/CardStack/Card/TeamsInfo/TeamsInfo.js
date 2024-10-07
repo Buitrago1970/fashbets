@@ -21,7 +21,7 @@ function TeamsInfo({ bet, odds, mainImage, date, teams, price }) {
         </div>
       </div>
       <div className="card__content-teams-info-price">
-        <p>${price}</p>
+        <p>$ {price}</p>
       </div>
       <div className="card__content-teams-info-potential-payment">
         ${price * odds}
