@@ -1,9 +1,4 @@
 /* Cards.css */
-.cards-container {
-  display: flex;
-  justify-content: center;
-  margin-bottom: 107px;
-}
 .timer-conatainer {
   display: flex;
   justify-content: center;

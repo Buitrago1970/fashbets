@@ -1,6 +1,5 @@
 import React, { useRef } from "react";
 import gsap from "gsap";
-import CardHeader from "./CardHeader/CardHeader";
 import TeamsInfo from "./TeamsInfo/TeamsInfo";
 import "./Card.css";
 
@@ -39,7 +38,7 @@ function Card({ card, onSwipe, zIndex }) {
     if (Math.abs(currentX.current) > 50) {
       const direction = currentX.current > 0 ? "right" : "left";
       const endX =
-        currentX.current > 0 ? window.innerWidth : -window.innerWidth;
+        currentX.current > 0 ? window.innerWidth : - window.innerWidth;
 
       gsap.to(cardRef.current, {
         x: endX,
@@ -75,9 +74,8 @@ function Card({ card, onSwipe, zIndex }) {
         if (isDragging.current) handleDragEnd();
       }}
     >
-      <div className="card__content">
-        <CardHeader sport={card.sport} />
         <TeamsInfo
+         sport={card.sport}
           bet={card.bet}
           odds={card.odds}
           mainImage={card.mainImage}
@@ -85,7 +83,6 @@ function Card({ card, onSwipe, zIndex }) {
           teams={card.teams}
           price={card.bettingInfo.price}
         />
-      </div>
     </div>
   );
 }

@@ -80,7 +80,7 @@ const Cards = () => {
         if (prevTimer >= duration) {
           clearInterval(timerRef.current);
           // Si el tiempo se agota y no se hizo swipe, se cancela la apuesta
-          onSwipe("timeout", cards[cards.length - 1]?.name);
+          // onSwipe("timeout", cards[cards.length - 1]?.name);
           return 0;
         }
         return prevTimer + 0.1; // Incrementa el timer cada 100ms
@@ -151,21 +151,19 @@ const Cards = () => {
       <HeaderTabs selectedTab={selectedTab} setSelectedTab={setSelectedTab} />
 
       {/* Contenedor de tarjetas */}
-      <div className="cards-container">
         <CardStack cards={cards} onSwipe={onSwipe} />
-      </div>
 
       {/* Botones de acción y botón de historial */}
-      <ActionButtons
+      {/* <ActionButtons
         swipeCard={swipeCard}
         acceptedBetsCount={acceptedBetsCount}
         handleHistoryClick={handleHistoryClick}
-      />
+      /> */}
 
       {/* Barra de progreso del temporizador */}
-      <div className="timer-conatainer">
+      {/* <div className="timer-conatainer">
         <TimerBar progressPercentage={progressPercentage} />
-      </div>
+      </div> */}
 
       {/* Pop-up de historial de apuestas */}
       {showHistoryPopup && (

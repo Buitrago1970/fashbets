@@ -1,9 +1,18 @@
 import React from "react";
 import "./TeamsInfo.css";
 
-function TeamsInfo({ bet, odds, mainImage, date, teams, price }) {
+function TeamsInfo({ sport, bet, odds, mainImage, date, teams, price }) {
   return (
-    <div className="card__content-teams-info">
+    <div>
+      <div className="card__content-header-container">
+        <div className="card__content-header">
+          <div className="card__content-header-icon">
+            <img src="https://img.icons8.com/ios/50/000000/football2.png" alt="sport icon" />
+          </div>
+          <div className="card__content-header-text">{sport}</div>
+        </div>
+      </div>
+      <div className="card__content-teams-info">
       <div className="card__content-teams-info-bet">{bet}</div>
       <div className="card__content-teams-info-odds">{odds}X</div>
       <div className="card__content-teams-info-container-main-image">
@@ -31,6 +40,7 @@ function TeamsInfo({ bet, odds, mainImage, date, teams, price }) {
       <div className="card__content-teams-info-potential-payment">
         ${price * odds}
       </div>
+    </div>
     </div>
   );
 }
