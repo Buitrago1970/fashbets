@@ -11,7 +11,9 @@ function Card({ card, onSwipe, zIndex }) {
   const isDragging = useRef(false);
 
   const handleDragStart = (e) => {
-    e.preventDefault();
+    if (!e.type.includes("touch")) {
+      e.preventDefault();
+    }
     isDragging.current = true;
     startX.current = e.type.includes("touch")
       ? e.touches[0].clientX
@@ -45,7 +47,6 @@ function Card({ card, onSwipe, zIndex }) {
         duration: 0.5,
         onComplete: () => {
           onSwipe(direction, card.name);
-          // No restablezcas la posición aquí
         },
       });
     } else {

@@ -26,7 +26,7 @@
     "name": 2,
     "bet": "¿Habrá más de 2.5 goles en el partido?",
     "odds": 1.8,
-    "mainImage": "https://example.com/match_image.jpg",
+    "mainImage": "https://imgcdn.stablediffusionweb.com/2024/9/21/7a758d1a-7d58-49ff-883b-6d99b9cb269c.jpg",
     "date": "Mañana, 5:30 PM",
     "sport": "Fútbol",
     "teams": [
@@ -49,7 +49,7 @@
     "name": 3,
     "bet": "¿Marcará Lionel Messi durante el partido?",
     "odds": 2.2,
-    "mainImage": "https://example.com/player_image.jpg",
+    "mainImage": "https://cdn.resfu.com/media/img_news/agencia-efe_multimedia_3334887.multimedia.photos.13216035.file.jpg?size=1000x&lossy=1",
     "date": "Hoy, 7:00 PM",
     "sport": "Fútbol",
     "teams": [
@@ -72,7 +72,7 @@
     "name": 4,
     "bet": "¿Habrá un gol en los primeros 20 minutos?",
     "odds": 1.6,
-    "mainImage": "https://example.com/goal_image.jpg",
+    "mainImage": "https://thumbs.dreamstime.com/b/minutes-clock-icon-interface-programs-applications-goal-setting-motivation-time-management-segment-part-hour-cartoon-273990837.jpg",
     "date": "Hoy, 9:00 PM",
     "sport": "Fútbol",
     "teams": [
@@ -95,7 +95,7 @@
     "name": 5,
     "bet": "¿Recibirán ambos equipos tarjetas amarillas?",
     "odds": 1.9,
-    "mainImage": "https://example.com/yellow_card.jpg",
+    "mainImage": "https://assets.sportsboom.com/A_referee_s_hand_showing_a_yellow_card_in_football_Ian_Burt_a45e68e69c.jpg",
     "date": "Mañana, 6:00 PM",
     "sport": "Fútbol",
     "teams": [
@@ -118,7 +118,7 @@
     "name": 6,
     "bet": "¿Habrá un penalti durante el partido?",
     "odds": 2.1,
-    "mainImage": "https://example.com/penalty_image.jpg",
+    "mainImage": "https://media.istockphoto.com/id/505988052/photo/soccer-game-moment-with-goalkeeper.jpg?s=612x612&w=0&k=20&c=OjU6cqiDsU31mMKZ4704V8Fp0ProTqUenr4H-QNtOww=",
     "date": "Hoy, 10:30 PM",
     "sport": "Fútbol",
     "teams": [
@@ -131,6 +131,213 @@
         "name": "Borussia Dortmund",
         "score": 3,
         "image": "https://upload.wikimedia.org/wikipedia/commons/6/67/Borussia_Dortmund_logo.svg"
+      }
+    ],
+    "bettingInfo": {
+      "price": 2500
+    }
+  },
+  {
+    "name": 7,
+    "bet": "¿El equipo B anotará en ambas mitades?",
+    "odds": 2.0,
+    "mainImage": "https://example.com/both_halves.jpg",
+    "date": "Mañana, 3:00 PM",
+    "sport": "Fútbol",
+    "teams": [
+      {
+        "name": "Chelsea",
+        "score": 1,
+        "image": "https://upload.wikimedia.org/wikipedia/en/c/cc/Chelsea_FC.svg"
+      },
+      {
+        "name": "Tottenham",
+        "score": 0,
+        "image": "https://upload.wikimedia.org/wikipedia/en/b/b4/Tottenham_Hotspur.svg"
+      }
+    ],
+    "bettingInfo": {
+      "price": 1300
+    }
+  },
+  {
+    "name": 8,
+    "bet": "¿Habrá más de 10 tiros de esquina en total?",
+    "odds": 1.7,
+    "mainImage": "https://example.com/corner_kicks.jpg",
+    "date": "Hoy, 5:00 PM",
+    "sport": "Fútbol",
+    "teams": [
+      {
+        "name": "Napoli",
+        "score": 2,
+        "image": "https://upload.wikimedia.org/wikipedia/en/2/28/S.S.C._Napoli_logo.svg"
+      },
+      {
+        "name": "AC Milan",
+        "score": 1,
+        "image": "https://upload.wikimedia.org/wikipedia/commons/d/d0/Logo_of_AC_Milan.svg"
+      }
+    ],
+    "bettingInfo": {
+      "price": 1400
+    }
+  },
+  {
+    "name": 9,
+    "bet": "¿Anotará el equipo A en la primera mitad?",
+    "odds": 1.9,
+    "mainImage": "https://example.com/first_half_goal.jpg",
+    "date": "Hoy, 6:30 PM",
+    "sport": "Fútbol",
+    "teams": [
+      {
+        "name": "Ajax",
+        "score": 0,
+        "image": "https://upload.wikimedia.org/wikipedia/en/7/79/Ajax_Amsterdam.svg"
+      },
+      {
+        "name": "Feyenoord",
+        "score": 0,
+        "image": "https://upload.wikimedia.org/wikipedia/en/c/c7/Feyenoord_logo.svg"
+      }
+    ],
+    "bettingInfo": {
+      "price": 1700
+    }
+  },
+  {
+    "name": 10,
+    "bet": "¿Habrá más de 3 tarjetas rojas en el partido?",
+    "odds": 2.5,
+    "mainImage": "https://example.com/red_card.jpg",
+    "date": "Mañana, 7:00 PM",
+    "sport": "Fútbol",
+    "teams": [
+      {
+        "name": "Valencia",
+        "score": 0,
+        "image": "https://upload.wikimedia.org/wikipedia/en/c/ce/Valencia_CF_logo.svg"
+      },
+      {
+        "name": "Villarreal",
+        "score": 0,
+        "image": "https://upload.wikimedia.org/wikipedia/en/7/70/Villarreal_CF_logo.svg"
+      }
+    ],
+    "bettingInfo": {
+      "price": 2000
+    }
+  },
+  {
+    "name": 11,
+    "bet": "¿El jugador Y será sustituido durante el partido?",
+    "odds": 1.8,
+    "mainImage": "https://example.com/substitution.jpg",
+    "date": "Hoy, 4:00 PM",
+    "sport": "Fútbol",
+    "teams": [
+      {
+        "name": "AS Roma",
+        "score": 2,
+        "image": "https://upload.wikimedia.org/wikipedia/en/f/f7/AS_Roma_logo_%282017%29.svg"
+      },
+      {
+        "name": "Lazio",
+        "score": 1,
+        "image": "https://upload.wikimedia.org/wikipedia/en/e/eb/S.S._Lazio_logo.svg"
+      }
+    ],
+    "bettingInfo": {
+      "price": 1600
+    }
+  },
+  {
+    "name": 12,
+    "bet": "¿Marcarán ambos equipos en la segunda mitad?",
+    "odds": 2.3,
+    "mainImage": "https://example.com/second_half_goal.jpg",
+    "date": "Hoy, 9:30 PM",
+    "sport": "Fútbol",
+    "teams": [
+      {
+        "name": "Porto",
+        "score": 1,
+        "image": "https://upload.wikimedia.org/wikipedia/en/4/4c/FC_Porto.svg"
+      },
+      {
+        "name": "Benfica",
+        "score": 1,
+        "image": "https://upload.wikimedia.org/wikipedia/en/a/a2/SL_Benfica_logo.svg"
+      }
+    ],
+    "bettingInfo": {
+      "price": 2100
+    }
+  },
+  {
+    "name": 13,
+    "bet": "¿Habrá un gol de tiro libre?",
+    "odds": 2.4,
+    "mainImage": "https://example.com/free_kick.jpg",
+    "date": "Mañana, 8:30 PM",
+    "sport": "Fútbol",
+    "teams": [
+      {
+        "name": "Atalanta",
+        "score": 1,
+        "image": "https://upload.wikimedia.org/wikipedia/en/4/47/Atalanta_BC.svg"
+      },
+      {
+        "name": "Sampdoria",
+        "score": 0,
+        "image": "https://upload.wikimedia.org/wikipedia/en/6/6e/U.C._Sampdoria_logo.svg"
+      }
+    ],
+    "bettingInfo": {
+      "price": 2400
+    }
+  },
+  {
+    "name": 14,
+    "bet": "¿El equipo B ganará por más de 1 gol?",
+    "odds": 1.7,
+    "mainImage": "https://example.com/win_by_2_goals.jpg",
+    "date": "Hoy, 7:30 PM",
+    "sport": "Fútbol",
+    "teams": [
+      {
+        "name": "Bayer Leverkusen",
+        "score": 2,
+        "image": "https://upload.wikimedia.org/wikipedia/en/3/3a/Bayer_04_Leverkusen_logo.svg"
+      },
+      {
+        "name": "RB Leipzig",
+        "score": 0,
+        "image": "https://upload.wikimedia.org/wikipedia/en/0/04/RB_Leipzig_2014_logo.svg"
+      }
+    ],
+    "bettingInfo": {
+      "price": 1900
+    }
+  },
+  {
+    "name": 15,
+    "bet": "¿Habrá más de 4 goles en la segunda mitad?",
+    "odds": 3.0,
+    "mainImage": "https://example.com/second_half_goals.jpg",
+    "date": "Hoy, 10:00 PM",
+    "sport": "Fútbol",
+    "teams": [
+      {
+        "name": "Marseille",
+        "score": 1,
+        "image": "https://upload.wikimedia.org/wikipedia/en/f/f6/Olympique_de_Marseille_logo.svg"
+      },
+      {
+        "name": "Lille",
+        "score": 0,
+        "image": "https://upload.wikimedia.org/wikipedia/en/8/8f/LOSC_Lille_logo.svg"
       }
     ],
     "bettingInfo": {

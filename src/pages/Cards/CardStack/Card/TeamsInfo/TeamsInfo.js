@@ -6,8 +6,10 @@ function TeamsInfo({ bet, odds, mainImage, date, teams, price }) {
     <div className="card__content-teams-info">
       <div className="card__content-teams-info-bet">{bet}</div>
       <div className="card__content-teams-info-odds">{odds}X</div>
-      <div className="card__content-teams-info-main-image">
-        <img src={mainImage} alt="main team" />
+      <div className="card__content-teams-info-container-main-image">
+        <div className="card__content-teams-info-main-image">
+          <img src={mainImage} alt="main team" />
+        </div>
       </div>
       <div className="card__content-teams-info-date">{date}</div>
       <div className="card__content-teams-info-teams">
