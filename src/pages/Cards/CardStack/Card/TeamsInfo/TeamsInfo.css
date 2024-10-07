@@ -66,7 +66,7 @@
 .card__content-teams-info-teams {
   display: flex;
   justify-content: space-around;
-  margin: 20px 15px;
+  margin: 15px 0px;
 }
 
 .card__content-teams-info-teams-team {
@@ -142,9 +142,10 @@
   }
 
   .card__content-teams-info-bet {
-    font-size: 24px;
+    font-size: 20px;
     width: 100%;
     margin: 0;
+    margin-top: 8px;
   }
 
   .card__content-teams-info-odds {
