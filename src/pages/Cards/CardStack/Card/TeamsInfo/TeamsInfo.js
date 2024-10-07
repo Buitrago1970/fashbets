@@ -20,6 +20,9 @@ function TeamsInfo({ bet, odds, mainImage, date, teams, price }) {
           <div>{teams[1].name}</div>
         </div>
       </div>
+      <div className="ard__content-teams-container-info-button">
+        <button className="card__content-teams-info-button">+ Ver Mas</button>
+      </div>
       <div className="card__content-teams-info-price">
         <p>$ {price}</p>
       </div>

@@ -1,7 +1,7 @@
 .card-stack {
   position: relative;
   width: 100%;
-  max-width: 400px; /* Ajusta según tus necesidades */
-  height: 600px; /* Ajusta según el tamaño de tus cartas */
+  max-width: 400px;
+  height: 632px;
   margin: auto;
 }

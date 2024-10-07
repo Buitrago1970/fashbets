@@ -49,8 +49,7 @@
 .card__content-teams-info-teams {
   display: flex;
   justify-content: space-around;
-  margin: 30px 15px;
-  margin-top: 20px;
+  margin: 20px 15px;
 }
 
 .card__content-teams-info-teams-team {
@@ -70,6 +69,29 @@
   color: #333;
   margin-top: 8px;
 }
+.card__content-teams-container-info-button {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.card__content-teams-info-button {
+  background-color: #cccccc;
+  color: #171717;
+  border: none;
+  border-radius: 5px;
+  padding: 3px 13px;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  margin-bottom: 30px;
+}
+
+.card__content-teams-info-button:active {
+  background-color: #b3b3b3;
+}
+
 .card__content-teams-info-price {
   display: flex;
   align-items: center;
