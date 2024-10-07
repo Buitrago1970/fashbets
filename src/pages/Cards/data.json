@@ -1,0 +1,25 @@
+[
+  {
+    "id": 1,
+    "bet": "¿Ganará El Real Madrid?",
+    "odds": 1.5,
+    "mainImage": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSf5VMOvn3uJgjIl_mzbbNawTP3-eFmYqNyig&s",
+    "date": "Hoy, 8:00 PM",
+    "sport": "Fútbol",
+    "teams": [
+      {
+        "name": "Real Madrid",
+        "score": 2,
+        "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSf5VMOvn3uJgjIl_mzbbNawTP3-eFmYqNyig&s"
+      },
+      {
+        "name": "Barcelona",
+        "score": 2,
+        "image": "https://upload.wikimedia.org/wikipedia/en/thumb/4/47/FC_Barcelona_%28crest%29.svg/2020px-FC_Barcelona_%28crest%29.svg.png"
+      }
+    ],
+    "bettingInfo": {
+      "price": 1000
+    }
+  }
+]

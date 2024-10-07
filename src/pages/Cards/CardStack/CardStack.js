@@ -7,7 +7,7 @@ function CardStack({ cards, onSwipe }) {
     <div className="card-stack">
       {cards.map((card, index) => (
         <Card
-          key={card.name}
+          key={card.id}
           card={card}
           onSwipe={onSwipe}
           zIndex={cards.length - index}
