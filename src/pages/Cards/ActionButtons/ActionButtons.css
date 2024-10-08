@@ -36,17 +36,19 @@
 /* Estilos para el botón de historial */
 .history-button {
   background-color: #ffc107;
-    color: #000000;
-    border: none;
-    border-radius: 50%;
-    width: 25px;
-    height: 25px;
-    font-size: 14px;
-    cursor: pointer;
-    position: absolute;
-    right: 30px;
-    bottom: 10px;
-    font-weight: 700;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
-    border: 1px solid #dd9218;
+  color: #000000;
+  border-radius: 50%;
+  width: 25px;
+  height: 25px;
+  font-size: 14px;
+  cursor: pointer;
+  position: absolute;
+  right: 30px;
+  bottom: 10px;
+  font-weight: 700;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+  border: 1px solid #dd9218;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }

@@ -46,7 +46,6 @@ margin: 0;
   font-style: normal;
   font-weight: 700;
   line-height: normal;
-  text-decoration: underline;
   margin: 5px 0;
 }
 .card__content-teams-info-container-main-image {
@@ -70,7 +69,6 @@ margin: 0;
 .card__content-teams-info-date {
   color: #808080;
   text-align: center;
-  font-family: Poppins;
   font-size: 14px;
   font-style: normal;
   font-weight: 500;
