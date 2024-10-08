@@ -1,5 +1,6 @@
 .cards-container{
   height: 65vh;
+  min-height: 565px;
   padding: 0 7%;
   margin: 10px 0;
 }
