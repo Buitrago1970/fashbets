@@ -25,7 +25,7 @@
   font-style: normal;
   font-weight: 600;
   line-height: normal;
-margin:   0;
+  margin: 0;
 }
 
 .card__content-teams-info-bet {
@@ -61,7 +61,7 @@ margin:   0;
   display: flex;
   align-items: center;
   justify-content: center;
-  margin: 33px 0px;
+  margin: 25px 0px;
 }
 .card__content-teams-info-main-image {
   width: 100px;
@@ -79,6 +79,7 @@ margin:   0;
 }
 .team-image-false{
   object-fit: cover;
+  border-radius: 10px;
 }
 .card__content-teams-info-date {
   color: #808080;

@@ -19,7 +19,6 @@ function Card({ card, onSwipe, zIndex }) {
 
   const handleDragMove = (e) => {
     if (!isDragging.current) return;
-    e.preventDefault();
     const clientX = e.type.includes("touch") ? e.touches[0].clientX : e.clientX;
     currentX.current = clientX - startX.current;
 
@@ -53,7 +52,7 @@ function Card({ card, onSwipe, zIndex }) {
     currentX.current = 0;
   };
 
-  const offsetY = zIndex * 0;
+  const offsetY = zIndex * 2;
 
   return (
     <div

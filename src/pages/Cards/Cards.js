@@ -74,13 +74,13 @@ const Cards = () => {
   }, [cards]);
 
   const startTimer = () => {
-    const duration = Math.floor(Math.random() * (20 - 10 + 1)) + 10; // Tiempo aleatorio entre 10 y 20 segundos
+    const duration = Math.floor(20); // Duración del temporizador en segundos
     timerRef.current = setInterval(() => {
       setTimer((prevTimer) => {
         if (prevTimer >= duration) {
           clearInterval(timerRef.current);
           // Si el tiempo se agota y no se hizo swipe, se cancela la apuesta
-          // onSwipe("timeout", cards[cards.length - 1]?.name);
+          onSwipe("timeout", cards[cards.length - 1]?.name);
           return 0;
         }
         return prevTimer + 0.1; // Incrementa el timer cada 100ms
