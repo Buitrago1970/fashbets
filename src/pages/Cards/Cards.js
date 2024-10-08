@@ -41,7 +41,6 @@ const Cards = () => {
 
   useEffect(() => {
     setInitialData(data);
-    console.log("initialData", initialData);
   }, []);
 
   useEffect(() => {
@@ -67,20 +66,20 @@ const Cards = () => {
     if (cards.length > 0) {
       setTimer(0);
       clearInterval(timerRef.current);
-      startTimer();
+      startTimer(cards[0]); 
     } else {
       clearInterval(timerRef.current);
     }
   }, [cards]);
 
-  const startTimer = () => {
-    const duration = Math.floor(20); // Duración del temporizador en segundos
+  const startTimer = (card) => {
+    const duration = Math.floor(5); // Duración del temporizador en segundos
     timerRef.current = setInterval(() => {
       setTimer((prevTimer) => {
         if (prevTimer >= duration) {
           clearInterval(timerRef.current);
           // Si el tiempo se agota y no se hizo swipe, se cancela la apuesta
-          onSwipe("timeout", cards[cards.length - 1]?.name);
+          onSwipe("timeout", card?.name);
           return 0;
         }
         return prevTimer + 0.1; // Incrementa el timer cada 100ms
@@ -96,7 +95,7 @@ const Cards = () => {
 
     if (direction === "right") {
       betStatus = "Aprobada";
-      setAcceptedBetsCount((prevCount) => prevCount + 1); // Incrementa el contador de apuestas aceptadas
+      setAcceptedBetsCount((prevCount) => prevCount + 1);
     } else if (direction === "left") {
       betStatus = "Rechazada";
     } else if (direction === "timeout") {
@@ -130,7 +129,7 @@ const Cards = () => {
 
   const swipeCard = (direction) => {
     if (cards.length === 0) return;
-    const currentCard = cards[cards.length - 1];
+    const currentCard = cards[0];
 
     onSwipe(direction, currentCard.name);
   };
@@ -143,7 +142,7 @@ const Cards = () => {
     setShowHistoryPopup(false);
   };
 
-  const progressPercentage = (timer / 20) * 100;
+  const progressPercentage = (timer / 5) * 100;
 
   return (
     <>
@@ -163,9 +162,9 @@ const Cards = () => {
       />
 
       {/* Barra de progreso del temporizador */}
-      <div className="timer-conatainer">
+       <div className="timer-conatainer">
         <TimerBar progressPercentage={progressPercentage} />
-      </div>
+      </div> 
 
       {/* Pop-up de historial de apuestas */}
       {showHistoryPopup && (
