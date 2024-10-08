@@ -36,6 +36,7 @@ const Cards = () => {
   const [acceptedBetsCount, setAcceptedBetsCount] = useState(0);
   const [showHistoryPopup, setShowHistoryPopup] = useState(false);
   const [initialData, setInitialData] = useState([]);
+  const betTimer = 20;
 
   const timerRef = useRef(null);
 
@@ -73,7 +74,7 @@ const Cards = () => {
   }, [cards]);
 
   const startTimer = (card) => {
-    const duration = Math.floor(5); // Duración del temporizador en segundos
+    const duration = Math.floor(betTimer); // Duración del temporizador en segundos
     timerRef.current = setInterval(() => {
       setTimer((prevTimer) => {
         if (prevTimer >= duration) {
@@ -142,7 +143,7 @@ const Cards = () => {
     setShowHistoryPopup(false);
   };
 
-  const progressPercentage = (timer / 5) * 100;
+  const progressPercentage = (timer / betTimer) * 100;
 
   return (
     <>
