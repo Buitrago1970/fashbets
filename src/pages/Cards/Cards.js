@@ -36,7 +36,7 @@ const Cards = () => {
   const [acceptedBetsCount, setAcceptedBetsCount] = useState(0);
   const [showHistoryPopup, setShowHistoryPopup] = useState(false);
   const [initialData, setInitialData] = useState([]);
-  const betTimer = 20;
+  const betTimer = 200000;
 
   const timerRef = useRef(null);
 
@@ -107,11 +107,12 @@ const Cards = () => {
     setBetHistory((prevHistory) => [
       ...prevHistory,
       {
-        match: name,
-        betType: swipedCard.bettingInfo.betType,
-        betFor: swipedCard.bettingInfo.betFor,
-        odds: swipedCard.bettingInfo.odds,
+        name: swipedCard.bet,
         status: betStatus,
+        odds: swipedCard.odds,
+        sport: swipedCard.sport,
+        teams: swipedCard.teams,
+        price: swipedCard.bettingInfo.price
       },
     ]);
 

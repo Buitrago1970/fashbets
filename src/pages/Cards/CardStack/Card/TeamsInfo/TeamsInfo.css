@@ -42,12 +42,15 @@
   min-height: 80px;
   margin-bottom: 15px;
 }
+.card__content-teams-info-bet-text{
+  margin: 0;
+}
 
 .card__content-teams-info-odds {
   color: #45a3ff;
   text-align: center;
   font-family: Poppins;
-  font-size: 20px;
+  font-size: 22px;
   font-style: normal;
   font-weight: 700;
   line-height: normal;
@@ -106,8 +109,8 @@
 }
 
 .card__content-teams-info-teams-team img {
-  width: 15px;
-  height: 15px;
+  width: 20px;
+  height: 20px;
   object-fit: contain;
 }
 
@@ -164,4 +167,5 @@
   font-style: normal;
   font-weight: 700;
   line-height: normal;
+  margin-top: 100px;
 }
