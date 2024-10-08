@@ -1,27 +1,31 @@
-.card__content-header-container {
-padding: 5px 10px;
-}
-.card__content-header{
+.card__content-teams-info{
+  padding: 10px;
 }
 .card__content-header-icon {
   color: #555;
   font-size: 20px;
 
   img {
-    width: 20px;
-    height: 20px;
+    width: 12px;
+    height: 12px;
   }
 }
 .card__content-header {
-  color: #555;
-  font-size: 10px;
   display: flex;
   align-items: center;
+  justify-content: center;
   gap: 5px;
+  height: 13px;
 }
 
 .card__content-header-text {
-margin: 0;
+  color: #555;
+  font-family: Poppins;
+  font-size: 10px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+margin:   0;
 }
 
 .card__content-teams-info-bet {
@@ -35,7 +39,8 @@ margin: 0;
   font-weight: bold;
   width: 95%;
   margin: auto;
-  min-height: 100px;
+  min-height: 80px;
+  margin-bottom: 15px;
 }
 
 .card__content-teams-info-odds {
@@ -47,6 +52,8 @@ margin: 0;
   font-weight: 700;
   line-height: normal;
   margin: 5px 0;
+  height: 20px;
+  margin-bottom: 10px;
 }
 .card__content-teams-info-container-main-image {
   width: 100%;
@@ -54,6 +61,7 @@ margin: 0;
   display: flex;
   align-items: center;
   justify-content: center;
+  margin: 33px 0px;
 }
 .card__content-teams-info-main-image {
   width: 100px;
@@ -69,29 +77,30 @@ margin: 0;
 .card__content-teams-info-date {
   color: #808080;
   text-align: center;
-  font-size: 14px;
+  font-family: Poppins;
+  font-size: 12px;
   font-style: normal;
   font-weight: 500;
   line-height: normal;
-  margin-top: 5px;
 }
 .card__content-teams-info-teams {
   display: flex;
   justify-content: space-around;
   margin: 20px 0px;
+  flex-direction: column;
+  align-items: center;
 }
 
 .card__content-teams-info-teams-team {
   display: flex;
-  flex-direction: column;
   align-items: center;
-  max-width: 50px;
-  text-align: center;
+  justify-content: center;
+  gap: 5px;
 }
 
 .card__content-teams-info-teams-team img {
-  width: 30px;
-  height: 30px;
+  width: 15px;
+  height: 15px;
   object-fit: contain;
 }
 
