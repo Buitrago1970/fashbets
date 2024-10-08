@@ -30,7 +30,7 @@ function ActionButtons({ swipeCard, acceptedBetsCount, handleHistoryClick }) {
       </button>
       <button
         className={`history-button ${isAnimating.history ? "button-press-animation" : ""}`}
-        onClick={() => handleButtonClick(null, "history")}
+        onClick={() => handleHistoryClick(null, "history")}
       >
         <div className="history-button-content">
           <div className="history-button-icon">

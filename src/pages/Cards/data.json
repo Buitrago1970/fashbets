@@ -366,5 +366,487 @@
     "bettingInfo": {
       "price": 500
     }
+  },
+
+  {
+    "name": 17,
+    "bet": "¿Ganará Nadal en sets corridos?",
+    "odds": 2.5,
+    "mainImage": "https://cadenaser.com/resizer/v2/YYG3HNZRBBAQFNHO3OYOJAEURE.jpg?auth=c5214f1cc64f94966112cfaee6e98eff74867f50eb264b955a24fb98f5bcd9ff&quality=70&width=650&height=487&focal=3186,407",
+    "teamImage": false,
+    "date": "Pasado mañana, 2:00 PM",
+    "sport": "Tenis",
+    "teams": [
+      {
+        "name": "Rafael Nadal",
+        "score": 0,
+        "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSCffaWw3IktT72aXpUjGlQPFsujVK_2f4How&s"
+      },
+      {
+        "name": "Novak Djokovic",
+        "score": 0,
+        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/57/Novak_Djokovic_Wimbledon_2022.jpg/640px-Novak_Djokovic_Wimbledon_2022.jpg"
+      }
+    ],
+    "bettingInfo": {
+      "price": 500
+    }
+  },
+  {
+    "name": 18,
+    "bet": "¿Habrá un nocaut en la pelea?",
+    "odds": 1.7,
+    "mainImage": "https://dmxg5wxfqgb4u.cloudfront.net/styles/athlete_bio_full_body/s3/2023-03/VOLKANOVSKI_ALEXANDER_L_BELT_03_04.png?itok=P6J6DQpm",
+    "teamImage": false,
+    "date": "Próximo sábado, 11:00 PM",
+    "sport": "MMA",
+    "teams": [
+      {
+        "name": "Alexander Volkanovski",
+        "score": 0,
+        "image": "https://dmxg5wxfqgb4u.cloudfront.net/styles/athlete_bio_full_body/s3/2023-03/VOLKANOVSKI_ALEXANDER_L_BELT_03_04.png?itok=P6J6DQpm"
+      },
+      {
+        "name": "Yair Rodriguez",
+        "score": 0,
+        "image": "https://dmxg5wxfqgb4u.cloudfront.net/styles/athlete_bio_full_body/s3/2023-02/RODRIGUEZ_YAIR_L_02-11.png?itok=mTjwZqZy"
+      }
+    ],
+    "bettingInfo": {
+      "price": 500
+    }
+  },
+  {
+    "name": 21,
+    "bet": "¿Ganará Serena Williams en sets corridos?",
+    "odds": 2.1,
+    "mainImage": "https://s3.amazonaws.com/rtvc-assets-senalcolombia.gov.co/s3fs-public/field/image/leyendas-deportes-serena-williams.jpg",
+    "teamImage": true,
+    "date": "Mañana, 3:00 PM",
+    "sport": "Tenis",
+    "teams": [
+      {
+        "name": "Serena Williams",
+        "score": 0,
+        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4b/Serena_Williams_at_2013_US_Open.jpg/800px-Serena_Williams_at_2013_US_Open.jpg"
+      },
+      {
+        "name": "Simona Halep",
+        "score": 0,
+        "image": "https://upload.wikimedia.org/wikipedia/commons/2/29/Halep_RG18_%2825%29_%2842929445712%29.jpg"
+      }
+    ],
+    "bettingInfo": {
+      "price": 500
+    }
+  },
+  {
+    "name": 24,
+    "bet": "¿Llegará Nadal a la final del torneo?",
+    "odds": 2.8,
+    "mainImage": "https://e00-marca.uecdn.es/assets/multimedia/imagenes/2022/06/28/16564279934979.jpg",
+    "teamImage": true,
+    "date": "Próxima semana",
+    "sport": "Tenis",
+    "teams": [
+      {
+        "name": "Rafael Nadal",
+        "score": 0,
+        "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSCffaWw3IktT72aXpUjGlQPFsujVK_2f4How&s"
+      },
+      {
+        "name": "Rafael Nadal",
+        "score": 0,
+        "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSCffaWw3IktT72aXpUjGlQPFsujVK_2f4How&s"
+      }
+    ],
+    "bettingInfo": {
+      "price": 500
+    }
+  },
+  {
+    "name": 27,
+    "bet": "¿Habrá un home run en el partido de béisbol?",
+    "odds": 1.8,
+    "mainImage": "https://www.fundeu.es/wp-content/uploads/2016/10/jonr%C3%B3n.jpg",
+    "teamImage": true,
+    "date": "Martes, 7:00 PM",
+    "sport": "Béisbol",
+    "teams": [
+      {
+        "name": "New York Yankees",
+        "score": null,
+        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8a/New_York_Yankees_logo.svg/1822px-New_York_Yankees_logo.svg.png"
+      },
+      {
+        "name": "Boston Red Sox",
+        "score": null,
+        "image": "https://upload.wikimedia.org/wikipedia/en/thumb/6/6d/RedSoxPrimary_HangingSocks.svg/640px-RedSoxPrimary_HangingSocks.svg.png"
+      }
+    ],
+    "bettingInfo": {
+      "price": 600
+    }
+  },
+  {
+    "name": 25,
+    "bet": "¿Ganará el Manchester City el próximo partido?",
+    "odds": 1.9,
+    "mainImage": "https://upload.wikimedia.org/wikipedia/en/e/eb/Manchester_City_FC_badge.svg",
+    "teamImage": true,
+    "date": "Mañana, 2:30 PM",
+    "sport": "Fútbol",
+    "teams": [
+      {
+        "name": "Manchester City",
+        "score": 0,
+        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8a/Etihad_Stadium.jpg/640px-Etihad_Stadium.jpg"
+      },
+      {
+        "name": "Liverpool",
+        "score": 0,
+        "image": "https://upload.wikimedia.org/wikipedia/en/0/0c/Liverpool_FC.svg"
+      }
+    ],
+    "bettingInfo": {
+      "price": 1000
+    }
+  },
+  {
+    "name": 26,
+    "bet": "¿Superará Lewis Hamilton los 300 km/h en la próxima carrera?",
+    "odds": 2.3,
+    "mainImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/49/Lewis_Hamilton_2016_Malaysia.jpg/640px-Lewis_Hamilton_2016_Malaysia.jpg",
+    "teamImage": true,
+    "date": "Domingo, 1:00 PM",
+    "sport": "Fórmula 1",
+    "teams": [
+      {
+        "name": "Lewis Hamilton",
+        "score": 0,
+        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/49/Lewis_Hamilton_2016_Malaysia.jpg/640px-Lewis_Hamilton_2016_Malaysia.jpg"
+      },
+      {
+        "name": "Max Verstappen",
+        "score": 0,
+        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5c/Max_Verstappen_2016_Malaysia_2.jpg/640px-Max_Verstappen_2016_Malaysia_2.jpg"
+      }
+    ],
+    "bettingInfo": {
+      "price": 1500
+    }
+  },
+  {
+    "name": 275,
+    "bet": "¿Anotará LeBron James más de 30 puntos en el próximo partido?",
+    "odds": 1.7,
+    "mainImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/LeBron_James_2018.jpg/640px-LeBron_James_2018.jpg",
+    "teamImage": true,
+    "date": "Esta noche, 7:00 PM",
+    "sport": "Baloncesto",
+    "teams": [
+      {
+        "name": "Los Angeles Lakers",
+        "score": 0,
+        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/Staples_Center_Lakers.jpg/640px-Staples_Center_Lakers.jpg"
+      },
+      {
+        "name": "Miami Heat",
+        "score": 0,
+        "image": "https://upload.wikimedia.org/wikipedia/en/f/fb/Miami_Heat_logo.svg"
+      }
+    ],
+    "bettingInfo": {
+      "price": 750
+    }
+  },
+  {
+    "name": 28,
+    "bet": "¿Ganará Novak Djokovic el torneo sin perder un set?",
+    "odds": 2.5,
+    "mainImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cb/Novak_Djokovic_2019_1.jpg/640px-Novak_Djokovic_2019_1.jpg",
+    "teamImage": true,
+    "date": "Próxima semana",
+    "sport": "Tenis",
+    "teams": [
+      {
+        "name": "Novak Djokovic",
+        "score": 0,
+        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cb/Novak_Djokovic_2019_1.jpg/640px-Novak_Djokovic_2019_1.jpg"
+      },
+      {
+        "name": "Daniil Medvedev",
+        "score": 0,
+        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ed/Daniil_Medvedev_2021.jpg/640px-Daniil_Medvedev_2021.jpg"
+      }
+    ],
+    "bettingInfo": {
+      "price": 600
+    }
+  },
+  {
+    "name": 29,
+    "bet": "¿Habrá más de 3 goles en el próximo clásico Real Madrid vs Barcelona?",
+    "odds": 1.8,
+    "mainImage": "https://upload.wikimedia.org/wikipedia/en/thumb/5/56/ElClasico-Logo.png/640px-ElClasico-Logo.png",
+    "teamImage": true,
+    "date": "Este fin de semana",
+    "sport": "Fútbol",
+    "teams": [
+      {
+        "name": "Real Madrid",
+        "score": 0,
+        "image": "https://upload.wikimedia.org/wikipedia/en/thumb/5/56/Real_Madrid_CF.svg/640px-Real_Madrid_CF.svg.png"
+      },
+      {
+        "name": "FC Barcelona",
+        "score": 0,
+        "image": "https://upload.wikimedia.org/wikipedia/en/thumb/4/47/FC_Barcelona_%28crest%29.svg/640px-FC_Barcelona_%28crest%29.svg.png"
+      }
+    ],
+    "bettingInfo": {
+      "price": 2000
+    }
+  },
+  {
+    "name": 30,
+    "bet": "¿Conseguirá Tom Brady más de 300 yardas en el próximo partido?",
+    "odds": 2.0,
+    "mainImage": "https://img.lalr.co/cms/2023/02/08062132/LeBron-James.png?size=sm&ratio=sq&f=jpg",
+    "teamImage": false,
+    "date": "Este domingo, 4:30 PM",
+    "sport": "Fútbol Americano",
+    "teams": [
+      {
+        "name": "Tampa Bay Buccaneers",
+        "score": 0,
+        "image": "https://upload.wikimedia.org/wikipedia/en/a/a2/Tampa_Bay_Buccaneers_logo.svg"
+      },
+      {
+        "name": "Dallas Cowboys",
+        "score": 0,
+        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/15/Dallas_Cowboys_logo.svg/640px-Dallas_Cowboys_logo.svg.png"
+      }
+    ],
+    "bettingInfo": {
+      "price": 1200
+    }
+  },
+  {
+    "name": 31,
+    "bet": "¿Marcará Lionel Messi en el próximo partido?",
+    "odds": 1.6,
+    "mainImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c1/Lionel_Messi_20180626.jpg/640px-Lionel_Messi_20180626.jpg",
+    "teamImage": true,
+    "date": "Mañana, 5:00 PM",
+    "sport": "Fútbol",
+    "teams": [
+      {
+        "name": "Inter Miami",
+        "score": 0,
+        "image": "https://upload.wikimedia.org/wikipedia/en/thumb/5/5c/Inter_Miami_CF_logo.svg/800px-Inter_Miami_CF_logo.svg.png"
+      },
+      {
+        "name": "Orlando City",
+        "score": 0,
+        "image": "https://upload.wikimedia.org/wikipedia/en/thumb/6/6a/Orlando_City_2014.svg/1200px-Orlando_City_2014.svg.png"
+      }
+    ],
+    "bettingInfo": {
+      "price": 800
+    }
+  },
+  {
+    "name": 32,
+    "bet": "¿Ganará el equipo de Golden State Warriors el próximo partido con más de 10 puntos de diferencia?",
+    "odds": 2.2,
+    "mainImage": "https://upload.wikimedia.org/wikipedia/en/thumb/0/01/Golden_State_Warriors_logo.svg/640px-Golden_State_Warriors_logo.svg.png",
+    "teamImage": true,
+    "date": "Viernes, 9:00 PM",
+    "sport": "Baloncesto",
+    "teams": [
+      {
+        "name": "Golden State Warriors",
+        "score": 0,
+        "image": "https://upload.wikimedia.org/wikipedia/en/thumb/0/01/Golden_State_Warriors_logo.svg/640px-Golden_State_Warriors_logo.svg.png"
+      },
+      {
+        "name": "Phoenix Suns",
+        "score": 0,
+        "image": "https://upload.wikimedia.org/wikipedia/en/thumb/d/dc/Phoenix_Suns_logo.svg/640px-Phoenix_Suns_logo.svg.png"
+      }
+    ],
+    "bettingInfo": {
+      "price": 1500
+    }
+  },
+  {
+    "name": 33,
+    "bet": "¿Logrará Max Verstappen la pole position en el próximo Gran Premio?",
+    "odds": 1.9,
+    "mainImage": "https://hips.hearstapps.com/hmg-prod/images/second-placed-qualifier-max-verstappen-of-the-netherlands-news-photo-1728026991.jpg?crop=1.00xw:1.00xh;0,0&resize=640:*",
+    "teamImage": false,
+    "date": "Domingo, 12:00 PM",
+    "sport": "Fórmula 1",
+    "teams": [
+      {
+        "name": "Red Bull Racing",
+        "score": 0,
+        "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQOXUwdWEnuxN7PO9oXCSq9DbmBeRZXPDzaoA&s"
+      },
+      {
+        "name": "Mercedes AMG",
+        "score": 0,
+        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fb/Mercedes_AMG_Petronas_F1_Logo.svg/2560px-Mercedes_AMG_Petronas_F1_Logo.svg.png"
+      }
+    ],
+    "bettingInfo": {
+      "price": 1800
+    }
+  },
+  {
+    "name": 34,
+    "bet": "¿Anotará Kylian Mbappé un doblete en el próximo partido?",
+    "odds": 2.4,
+    "mainImage": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcReClrdJzXOhOVaLjf4Q0-tF_lYLUkeelRENQ&s",
+    "teamImage": true,
+    "date": "Sábado, 6:00 PM",
+    "sport": "Fútbol",
+    "teams": [
+      {
+        "name": "Paris Saint-Germain",
+        "score": 0,
+        "image": "https://upload.wikimedia.org/wikipedia/en/thumb/a/a7/Paris_Saint-Germain_F.C..svg/1200px-Paris_Saint-Germain_F.C..svg.png"
+      },
+      {
+        "name": "Olympique de Marseille",
+        "score": 0,
+        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d8/Olympique_Marseille_logo.svg/1200px-Olympique_Marseille_logo.svg.png"
+      }
+    ],
+    "bettingInfo": {
+      "price": 1300
+    }
+  },
+  {
+    "name": 35,
+    "bet": "¿Superará Stephen Curry los 5 triples en el próximo partido?",
+    "odds": 1.8,
+    "mainImage": "https://phantom-marca-us.unidadeditorial.es/7defb6cde4ec30642cb264ff5afe9a2c/resize/828/f/jpg/assets/multimedia/imagenes/2024/08/30/17249739223458.jpg",
+    "teamImage": true,
+    "date": "Este sábado, 8:00 PM",
+    "sport": "Baloncesto",
+    "teams": [
+      {
+        "name": "Golden State Warriors",
+        "score": 0,
+        "image": "https://upload.wikimedia.org/wikipedia/en/thumb/0/01/Golden_State_Warriors_logo.svg/640px-Golden_State_Warriors_logo.svg.png"
+      },
+      {
+        "name": "Los Angeles Lakers",
+        "score": 0,
+        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3c/Los_Angeles_Lakers_logo.svg/1200px-Los_Angeles_Lakers_logo.svg.png"
+      }
+    ],
+    "bettingInfo": {
+      "price": 1000
+    }
+  },
+  {
+    "name": 36,
+    "bet": "¿Ganará Novak Djokovic el partido sin ceder un set?",
+    "odds": 2.1,
+    "mainImage": "https://static.independentespanol.com/2024/10/08/18/NOVAK_DJOKOVIC_77105.jpg",
+    "teamImage": true,
+    "date": "Próxima semana",
+    "sport": "Tenis",
+    "teams": [
+      {
+        "name": "Novak Djokovic",
+        "score": 0,
+        "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTWp8aWsjkpEjOMUUEXOd010zYr8YVG8iyssA&s"
+      },
+      {
+        "name": "Daniil Medvedev",
+        "score": 0,
+        "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS5CEoa5dIAWz45cLBp6730GRqUqj-xBuNVyw&s"
+      }
+    ],
+    "bettingInfo": {
+      "price": 1100
+    }
+  },
+  {
+    "name": 37,
+    "bet": "¿Conseguirá LeBron James un triple-doble en el próximo partido?",
+    "odds": 2.5,
+    "mainImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1a/LeBron_James_Lakers_2021.jpg/640px-LeBron_James_Lakers_2021.jpg",
+    "teamImage": true,
+    "date": "Este viernes, 9:00 PM",
+    "sport": "Baloncesto",
+    "teams": [
+      {
+        "name": "Los Angeles Lakers",
+        "score": 0,
+        "image": "https://upload.wikimedia.org/wikipedia/en/thumb/3/35/Los_Angeles_Lakers_logo.svg/640px-Los_Angeles_Lakers_logo.svg.png"
+      },
+      {
+        "name": "Miami Heat",
+        "score": 0,
+        "image": "https://upload.wikimedia.org/wikipedia/en/thumb/f/fb/Miami_Heat_logo.svg/640px-Miami_Heat_logo.svg.png"
+      }
+    ],
+    "bettingInfo": {
+      "price": 900
+    }
+  },
+  {
+    "name": 38,
+    "bet": "¿Ganará Max Verstappen la próxima carrera sin perder el liderazgo?",
+    "odds": 2.2,
+    "mainImage": "https://hips.hearstapps.com/hmg-prod/images/second-placed-qualifier-max-verstappen-of-the-netherlands-news-photo-1728026991.jpg?crop=1.00xw:1.00xh;0,0&resize=640:*",
+    "teamImage": true,
+    "date": "Domingo, 2:00 PM",
+    "sport": "Fórmula 1",
+    "teams": [
+      {
+        "name": "Max Verstappen",
+        "score": 0,
+        "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ8DE94XzdSRaQfs_PmIGAKrOo-8kMgVdT-wA&s"
+      },
+      {
+        "name": "Lewis Hamilton",
+        "score": 0,
+        "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTb6lPFyG5oH1nip9twdRHjbM5WZ9pFzK34cw&s"
+      }
+    ],
+    "bettingInfo": {
+      "price": 1500
+    }
+  },
+  {
+    "name": 39,
+    "bet": "¿Logrará Israel Adesanya ganar su pelea por nocaut?",
+    "odds": 1.9,
+    "mainImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/29/Israel_Adesanya_with_UFC_middleweight_belt_3.jpg/640px-Israel_Adesanya_with_UFC_middleweight_belt_3.jpg",
+    "teamImage": true,
+    "date": "Este sábado, 10:00 PM",
+    "sport": "MMA",
+    "teams": [
+      {
+        "name": "Israel Adesanya",
+        "score": 0,
+        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/29/Israel_Adesanya_with_UFC_middleweight_belt_3.jpg/640px-Israel_Adesanya_with_UFC_middleweight_belt_3.jpg"
+      },
+      {
+        "name": "Robert Whittaker",
+        "score": 0,
+        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6c/Robert_Whittaker_with_UFC_middleweight_belt.jpg/640px-Robert_Whittaker_with_UFC_middleweight_belt.jpg"
+      }
+    ],
+    "bettingInfo": {
+      "price": 2000
+    }
   }
+ 
 ]

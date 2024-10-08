@@ -14,7 +14,10 @@ import data from "./data.json";
 // Datos de ejemplo para cada categoría
 const siguiendoData = [];
 
-const recomendadoData = [];
+const recomendadoData = [
+ 
+ 
+];
 
 const enVivoData = [];
 
@@ -36,7 +39,7 @@ const Cards = () => {
   const [acceptedBetsCount, setAcceptedBetsCount] = useState(0);
   const [showHistoryPopup, setShowHistoryPopup] = useState(false);
   const [initialData, setInitialData] = useState([]);
-  const betTimer = 20;
+  const betTimer = 200000;
 
   const timerRef = useRef(null);
 
@@ -98,11 +101,9 @@ const Cards = () => {
       betStatus = "Aprobada";
       setAcceptedBetsCount((prevCount) => prevCount + 1);
     } else if (direction === "left") {
-      setAcceptedBetsCount((prevCount) => prevCount + 1);
 
       betStatus = "Rechazada";
     } else if (direction === "timeout") {
-      setAcceptedBetsCount((prevCount) => prevCount + 1);
 
       betStatus = "Cancelada por tiempo";
     }

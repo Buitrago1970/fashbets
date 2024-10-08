@@ -17,20 +17,23 @@ function HistoryPopup({ betHistory, closeHistoryPopup }) {
           ) : (
             <ul className="bet-list">
               {betHistory.map((bet, index) => (
-                <li
-                  key={index}
-                  className={`bet-item ${bet.status === "Aprobada" ? "green" : "red"}`}
-                >
+                <li key={index} className={`bet-item ${bet.status === "Aprobada" ? "green" : "red"}`}>
                   <div className="bet-info">
                     <h3 className="bet-name">{bet.name}</h3>
                     <p className="bet-details">
                       Deporte: <span>{bet.sport}</span>
                     </p>
-                    <div>
+                    <div className="card__content-teams-info-teams">
                       {bet.teams.map((team, idx) => (
-                        <div key={idx} className="bet-details">
-                          Equipo {idx + 1}: <span>{team.name}</span>
-                        </div>
+                       <div className="card__content-teams-info-teams">
+                       <div>
+                         <div className="card__content-teams-info-teams-team">
+                           <img src={team.image} alt={team.name} />
+                           <div>{team.name}</div>
+                         </div>
+               
+                       </div>
+                     </div>
                       ))}
                     </div>
                     <p className="bet-details">

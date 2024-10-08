@@ -25,7 +25,7 @@ function Card({ card, onSwipe, zIndex }) {
     const clientX = e.type.includes("touch") ? e.touches[0].clientX : e.clientX;
     currentX.current = clientX - startX.current;
 
-    const rotation = (currentX.current / window.innerWidth) * 33; // Efecto de rotación
+    const rotation = (currentX.current / window.innerWidth) * 50; // Efecto de rotación
     gsap.to(cardRef.current, {
       x: currentX.current,
       rotation,
@@ -52,8 +52,8 @@ function Card({ card, onSwipe, zIndex }) {
     const darkRed = [255, 0, 0];
 
     // Ajustar el color basado en el porcentaje de deslizamiento
-    if (swipePercentage > 0.2) {
-      const factor = Math.min((swipePercentage - 0.2) / 0.7, 1); // Limitar el factor al 100%
+    if (swipePercentage > 0.13) {
+      const factor = Math.min((swipePercentage - 0.13) / 0.7, 1); // Limitar el factor al 100%
       if (currentX.current > 0) {
         setBgColor(interpolateColor(lightGreen, darkGreen, factor)); // Verde para deslizamiento a la derecha
       } else if (currentX.current < 0) {
