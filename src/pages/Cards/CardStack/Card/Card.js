@@ -52,7 +52,6 @@ function Card({ card, onSwipe, zIndex }) {
     currentX.current = 0;
   };
 
-  const offsetY = zIndex * 2;
 
   return (
     <div
@@ -60,7 +59,6 @@ function Card({ card, onSwipe, zIndex }) {
       ref={cardRef}
       style={{
         zIndex,
-        transform: `translateY(-${offsetY}px)`,
         touchAction: 'none'
       }}
       onTouchStart={handleDragStart}

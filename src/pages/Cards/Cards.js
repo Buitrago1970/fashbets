@@ -150,6 +150,11 @@ const Cards = () => {
       {/* Encabezado con las opciones */}
       <HeaderTabs selectedTab={selectedTab} setSelectedTab={setSelectedTab} />
 
+      {/* Barra de progreso del temporizador */}
+      <div className="timer-conatainer">
+        <TimerBar progressPercentage={progressPercentage} />
+      </div> 
+
       {/* Contenedor de tarjetas */}
       <div className="cards-container">
         <CardStack cards={cards} onSwipe={onSwipe} />
@@ -162,10 +167,6 @@ const Cards = () => {
         handleHistoryClick={handleHistoryClick}
       />
 
-      {/* Barra de progreso del temporizador */}
-       <div className="timer-conatainer">
-        <TimerBar progressPercentage={progressPercentage} />
-      </div> 
 
       {/* Pop-up de historial de apuestas */}
       {showHistoryPopup && (
