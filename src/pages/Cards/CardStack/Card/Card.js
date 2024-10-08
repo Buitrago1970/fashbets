@@ -10,9 +10,7 @@ function Card({ card, onSwipe, zIndex }) {
   const isDragging = useRef(false);
 
   const handleDragStart = (e) => {
-    if (!e.type.includes("touch")) {
-      e.preventDefault();
-    }
+    e.preventDefault();
     isDragging.current = true;
     startX.current = e.type.includes("touch")
       ? e.touches[0].clientX
@@ -21,6 +19,7 @@ function Card({ card, onSwipe, zIndex }) {
 
   const handleDragMove = (e) => {
     if (!isDragging.current) return;
+    e.preventDefault();
     const clientX = e.type.includes("touch") ? e.touches[0].clientX : e.clientX;
     currentX.current = clientX - startX.current;
 
@@ -63,6 +62,7 @@ function Card({ card, onSwipe, zIndex }) {
       style={{
         zIndex,
         transform: `translateY(-${offsetY}px)`,
+        touchAction: 'none'
       }}
       onTouchStart={handleDragStart}
       onTouchMove={handleDragMove}

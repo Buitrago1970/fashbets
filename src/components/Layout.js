@@ -34,7 +34,6 @@ const Layout = () => {
             <div className="logo-container">
               <img src={logo} alt="Betplay logo" className="logo" />
             </div>
-            {/* <p className="menu-text">Menú</p> */}
           </Link>
           {location.pathname === "/" && (
             <div className="header-flashbet">
@@ -55,14 +54,9 @@ const Layout = () => {
         <div className="header-bottom">
           <div className="user-info">
             <p className="user-name">Juan Buitrago</p>
-            {/* <p className="session-text">Sesión</p> */}
             <p className="session-time">{formatTime(sessionTime)}</p>
           </div>
-          {/* <div className="extra-info">
-            <p className="extra-content">•</p>
-            <p className="extra-content">•</p>
-            <p className="extra-content">•</p>
-          </div> */}
+
         </div>
       </header>
       <main className="layout-main">

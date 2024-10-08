@@ -1,7 +1,12 @@
-/* Cards.css */
+.cards-container{
+  height: 65vh;
+  padding: 0 7%;
+  margin: 10px 0;
+}
+
 .timer-conatainer {
   display: flex;
   justify-content: center;
-  margin: 25px 0;
-  margin-bottom: 30;
+  margin-top: 10px;
+  margin-bottom: 30px;
 }

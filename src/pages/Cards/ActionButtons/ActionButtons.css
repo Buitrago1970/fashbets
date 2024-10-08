@@ -2,15 +2,16 @@
 .buttons-container {
   display: flex;
   justify-content: center;
-  margin-bottom: 50px;
+  position: relative;
+
 }
 
 /* Estilos generales para los botones */
 .action-button {
-  width: 70px;
-  height: 70px;
+  width: 50px;
+  height: 50px;
   border-radius: 50%;
-  font-size: 30px;
+  font-size: 20px;
   color: #fff;
   border: none;
   margin: 0 20px;
@@ -34,13 +35,18 @@
 }
 /* Estilos para el botón de historial */
 .history-button {
-  background-color: #ffc107; /* Color amarillo */
-  color: #000;
-  border: none;
-  border-radius: 50%;
-  width: 40px;
-  height: 40px;
-  font-size: 16px;
-  position: relative;
-  cursor: pointer;
+  background-color: #ffc107;
+    color: #000000;
+    border: none;
+    border-radius: 50%;
+    width: 25px;
+    height: 25px;
+    font-size: 14px;
+    cursor: pointer;
+    position: absolute;
+    right: 30px;
+    bottom: 10px;
+    font-weight: 700;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+    border: 1px solid #dd9218;
 }

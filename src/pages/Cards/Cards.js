@@ -151,19 +151,21 @@ const Cards = () => {
       <HeaderTabs selectedTab={selectedTab} setSelectedTab={setSelectedTab} />
 
       {/* Contenedor de tarjetas */}
+      <div className="cards-container">
         <CardStack cards={cards} onSwipe={onSwipe} />
+      </div>
 
       {/* Botones de acción y botón de historial */}
-      {/* <ActionButtons
+      <ActionButtons
         swipeCard={swipeCard}
         acceptedBetsCount={acceptedBetsCount}
         handleHistoryClick={handleHistoryClick}
-      /> */}
+      />
 
       {/* Barra de progreso del temporizador */}
-      {/* <div className="timer-conatainer">
+      <div className="timer-conatainer">
         <TimerBar progressPercentage={progressPercentage} />
-      </div> */}
+      </div>
 
       {/* Pop-up de historial de apuestas */}
       {showHistoryPopup && (

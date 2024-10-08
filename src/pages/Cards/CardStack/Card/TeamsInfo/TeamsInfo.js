@@ -9,7 +9,7 @@ function TeamsInfo({ sport, bet, odds, mainImage, date, teams, price }) {
           <div className="card__content-header-icon">
             <img src="https://img.icons8.com/ios/50/000000/football2.png" alt="sport icon" />
           </div>
-          <div className="card__content-header-text">{sport}</div>
+          <p className="card__content-header-text">{sport}</p>
         </div>
       </div>
       <div className="card__content-teams-info">
@@ -31,7 +31,7 @@ function TeamsInfo({ sport, bet, odds, mainImage, date, teams, price }) {
           <div>{teams[1].name}</div>
         </div>
       </div>
-      <div className="ard__content-teams-container-info-button">
+      <div className="card__content-teams-container-info-button">
         <button className="card__content-teams-info-button">+ Ver Mas</button>
       </div>
       <div className="card__content-teams-info-price">
