@@ -25,7 +25,7 @@ function Card({ card, onSwipe, zIndex }) {
     const clientX = e.type.includes("touch") ? e.touches[0].clientX : e.clientX;
     currentX.current = clientX - startX.current;
 
-    const rotation = (currentX.current / window.innerWidth) * 50; // Efecto de rotación
+    const rotation = (currentX.current / window.innerWidth) * 33; // Efecto de rotación
     gsap.to(cardRef.current, {
       x: currentX.current,
       rotation,
