@@ -2,6 +2,9 @@ import React from "react";
 import "./TeamsInfo.css";
 
 function TeamsInfo({ sport, bet, odds, mainImage, date, teams, price, teamImage }) {
+  const formatToCOP = (value) => {
+    return new Intl.NumberFormat('es-CO', { style: 'currency', currency: 'COP' }).format(value).replace(/,00$/, '');
+  };
   return (
       <div className="card__content-teams-info">
       <div className="card__content-teams-info-bet">{bet}</div>
@@ -36,7 +39,7 @@ function TeamsInfo({ sport, bet, odds, mainImage, date, teams, price, teamImage 
         <p>$ {price}</p>
       </div>
       <div className="card__content-teams-info-potential-payment">
-        ${price * odds}
+      {formatToCOP(price * odds)}
       </div>
     </div>
   );
