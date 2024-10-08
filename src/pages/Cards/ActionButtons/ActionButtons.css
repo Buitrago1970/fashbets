@@ -64,10 +64,38 @@
 }
 
 .history-button-count {
-  font-size: 14px;
+  font-size: 12px;
   font-weight: bold;
   position: absolute;
-  top: -12px;
-  right: -9px;
-  font-weight: 800;
+  top: -13px;
+  right: -12px;
+  background: red;
+  border-radius: 9px;
+  color: white;
+  border: 1px solid black;
+  width: 17px;
+  height: 17px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+}
+
+/* Add this to ActionButtons.css */
+
+/* Animation for button press */
+@keyframes button-press {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(0.9);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.button-press-animation {
+  animation: button-press 0.2s ease-in-out;
 }

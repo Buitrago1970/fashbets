@@ -50,12 +50,12 @@
   color: #45a3ff;
   text-align: center;
   font-family: Poppins;
-  font-size: 22px;
+  font-size: 25px;
   font-style: normal;
   font-weight: 700;
   line-height: normal;
   margin: 5px 0;
-  height: 20px;
+  height: 30px;
   margin-bottom: 10px;
 }
 .card__content-teams-info-container-main-image {
@@ -83,6 +83,7 @@
 .team-image-false{
   object-fit: cover;
   border-radius: 10px;
+  width: 150px;
 }
 .card__content-teams-info-date {
   color: #808080;
@@ -167,5 +168,33 @@
   font-style: normal;
   font-weight: 700;
   line-height: normal;
-  margin-top: 100px;
+}
+.card__content-teams-info-price {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin: 10px 0;
+}
+
+.card__content-teams-info-price button {
+  width: 23px;
+  background-color: #ffffff;
+  color: #000000;
+  border: none;
+  border-radius: 47px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+  border: 1px solid #bababa;
+  height: 23px;
+}
+
+.card__content-teams-info-price button:hover {
+  border: 1px solid rgb(0, 0, 0);
+}
+
+.card__content-teams-info-price p {
+  margin: 0;
+  font-size: 18px;
+  font-weight: bold;
 }

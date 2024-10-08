@@ -45,15 +45,15 @@ function Card({ card, onSwipe, zIndex }) {
     };
 
     // Colores iniciales y finales
-    const lightGreen = [212, 237, 218];
+    const lightGreen = [212, 237, 218, 1];
     const darkGreen = [82, 196, 26];
 
     const lightRed = [248, 215, 218];
     const darkRed = [255, 0, 0];
 
     // Ajustar el color basado en el porcentaje de deslizamiento
-    if (swipePercentage > 0.17) {
-      const factor = Math.min((swipePercentage - 0.17) / 0.7, 1); // Limitar el factor al 100%
+    if (swipePercentage > 0.2) {
+      const factor = Math.min((swipePercentage - 0.2) / 0.7, 1); // Limitar el factor al 100%
       if (currentX.current > 0) {
         setBgColor(interpolateColor(lightGreen, darkGreen, factor)); // Verde para deslizamiento a la derecha
       } else if (currentX.current < 0) {
@@ -114,7 +114,7 @@ function Card({ card, onSwipe, zIndex }) {
         mainImage={card.mainImage}
         date={card.date}
         teams={card.teams}
-        price={card.bettingInfo.price}
+        initialPrice={card.bettingInfo.price}
         teamImage={card.teamImage}
       />
     </div>

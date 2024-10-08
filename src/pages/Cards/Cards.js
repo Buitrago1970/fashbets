@@ -98,8 +98,12 @@ const Cards = () => {
       betStatus = "Aprobada";
       setAcceptedBetsCount((prevCount) => prevCount + 1);
     } else if (direction === "left") {
+      setAcceptedBetsCount((prevCount) => prevCount + 1);
+
       betStatus = "Rechazada";
     } else if (direction === "timeout") {
+      setAcceptedBetsCount((prevCount) => prevCount + 1);
+
       betStatus = "Cancelada por tiempo";
     }
 
