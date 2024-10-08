@@ -82,6 +82,7 @@ function Card({ card, onSwipe, zIndex }) {
           date={card.date}
           teams={card.teams}
           price={card.bettingInfo.price}
+          teamImage={card.teamImage}
         />
     </div>
   );

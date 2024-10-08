@@ -1,7 +1,7 @@
 import React from "react";
 import "./TeamsInfo.css";
 
-function TeamsInfo({ sport, bet, odds, mainImage, date, teams, price }) {
+function TeamsInfo({ sport, bet, odds, mainImage, date, teams, price, teamImage }) {
   return (
       <div className="card__content-teams-info">
       <div className="card__content-teams-info-bet">{bet}</div>
@@ -15,7 +15,7 @@ function TeamsInfo({ sport, bet, odds, mainImage, date, teams, price }) {
 
       <div className="card__content-teams-info-date">{date}</div>
       <div className="card__content-teams-info-container-main-image">
-        <div className="card__content-teams-info-main-image">
+        <div className={`card__content-teams-info-main-image  ${teamImage ? 'team-image-true' : 'team-image-false'}`}>
           <img src={mainImage} alt="main team" />
         </div>
       </div>

@@ -4,6 +4,7 @@
     "bet": "¿Ganará El Real Madrid?",
     "odds": 1.5,
     "mainImage": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSf5VMOvn3uJgjIl_mzbbNawTP3-eFmYqNyig&s",
+    "teamImage":true,
     "date": "Hoy, 8:00 PM",
     "sport": "Fútbol",
     "teams": [
@@ -26,7 +27,8 @@
     "name": 2,
     "bet": "¿Habrá más de 2.5 goles en el partido?",
     "odds": 1.8,
-    "mainImage": "https://imgcdn.stablediffusionweb.com/2024/9/21/7a758d1a-7d58-49ff-883b-6d99b9cb269c.jpg",
+    "mainImage": "https://betpractice.es/wp-content/uploads/Mas-de-2.5-goles-FT.jpg",
+    "teamImage":false,
     "date": "Mañana, 5:30 PM",
     "sport": "Fútbol",
     "teams": [
@@ -50,6 +52,8 @@
     "bet": "¿Marcará Lionel Messi durante el partido?",
     "odds": 2.2,
     "mainImage": "https://cdn.resfu.com/media/img_news/agencia-efe_multimedia_3334887.multimedia.photos.13216035.file.jpg?size=1000x&lossy=1",
+    "teamImage":false,
+
     "date": "Hoy, 7:00 PM",
     "sport": "Fútbol",
     "teams": [
@@ -73,6 +77,8 @@
     "bet": "¿Habrá un gol en los primeros 10 minutos?",
     "odds": 1.6,
     "mainImage": "https://thumbs.dreamstime.com/b/minutes-clock-icon-interface-programs-applications-goal-setting-motivation-time-management-segment-part-hour-cartoon-273990837.jpg",
+    "teamImage":false,
+
     "date": "Hoy, 9:00 PM",
     "sport": "Fútbol",
     "teams": [
@@ -95,7 +101,9 @@
     "name": 5,
     "bet": "¿Recibirán ambos equipos tarjetas amarillas?",
     "odds": 1.9,
-    "mainImage": "../../assets/amarillo.jpeg",
+    "mainImage": "https://alejandrofabbri.com.ar/site/wp-content/uploads/2023/10/tarjeta-amarilla-452804-750x375-1.webp",
+    "teamImage":false,
+
     "date": "Mañana, 6:00 PM",
     "sport": "Fútbol",
     "teams": [
@@ -119,6 +127,8 @@
     "bet": "¿Habrá un penalti durante el partido?",
     "odds": 2.1,
     "mainImage": "https://media.istockphoto.com/id/505988052/photo/soccer-game-moment-with-goalkeeper.jpg?s=612x612&w=0&k=20&c=OjU6cqiDsU31mMKZ4704V8Fp0ProTqUenr4H-QNtOww=",
+    "teamImage":false,
+
     "date": "Hoy, 10:30 PM",
     "sport": "Fútbol",
     "teams": [
@@ -141,19 +151,20 @@
     "name": 7,
     "bet": "¿El equipo Millonarios anotará en ambas mitades?",
     "odds": 2.0,
-    "mainImage": "https://example.com/both_halves.jpg",
+    "mainImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7d/Escudo_de_Millonarios_F%C3%BAtbol_Club.svg/2048px-Escudo_de_Millonarios_F%C3%BAtbol_Club.svg.png",
+    "teamImage":true,
     "date": "Mañana, 3:00 PM",
     "sport": "Fútbol",
     "teams": [
       {
         "name": "Millonarios",
         "score": 1,
-        "image": "https://upload.wikimedia.org/wikipedia/en/c/cc/Chelsea_FC.svg"
+        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7d/Escudo_de_Millonarios_F%C3%BAtbol_Club.svg/2048px-Escudo_de_Millonarios_F%C3%BAtbol_Club.svg.png"
       },
       {
         "name": "Nacional",
         "score": 0,
-        "image": "https://upload.wikimedia.org/wikipedia/en/b/b4/Tottenham_Hotspur.svg"
+        "image": "https://upload.wikimedia.org/wikipedia/commons/2/29/Atletico-nacional-vector-logo_11186.jpg"
       }
     ],
     "bettingInfo": {
@@ -164,7 +175,8 @@
     "name": 8,
     "bet": "¿Habrá más de 10 tiros de esquina en total?",
     "odds": 1.7,
-    "mainImage": "https://example.com/corner_kicks.jpg",
+    "mainImage": "https://futbolete.com/wp-content/uploads/2019/08/saque-de-esquina.jpg",
+    "teamImage":false,
     "date": "Hoy, 5:00 PM",
     "sport": "Fútbol",
     "teams": [
@@ -187,7 +199,8 @@
     "name": 9,
     "bet": "¿Anotará el equipo Ajax en la primera mitad?",
     "odds": 1.9,
-    "mainImage": "https://example.com/first_half_goal.jpg",
+    "mainImage": "https://upload.wikimedia.org/wikipedia/en/7/79/Ajax_Amsterdam.svg",
+    "teamImage":true,
     "date": "Hoy, 6:30 PM",
     "sport": "Fútbol",
     "teams": [
@@ -210,7 +223,9 @@
     "name": 10,
     "bet": "¿Habrá más de 3 tarjetas rojas en el partido?",
     "odds": 2.5,
-    "mainImage": "https://example.com/red_card.jpg",
+    "mainImage": "https://atleticonortefc.com/wp-content/uploads/2023/02/Tarjeta-roja-960x640-1.jpeg",
+    "teamImage":false,
+
     "date": "Mañana, 7:00 PM",
     "sport": "Fútbol",
     "teams": [
@@ -233,7 +248,9 @@
     "name": 11,
     "bet": "¿El jugador Paulo Dybala será sustituido durante el partido?",
     "odds": 1.8,
-    "mainImage": "https://example.com/substitution.jpg",
+    "mainImage": "https://e0.365dm.com/20/01/2048x1152/skysports-paulo-dybala-juventus_4901489.jpg?20200125084648",
+    "teamImage":false,
+
     "date": "Hoy, 4:00 PM",
     "sport": "Fútbol",
     "teams": [
@@ -256,7 +273,9 @@
     "name": 12,
     "bet": "¿Marcarán ambos equipos en la segunda mitad?",
     "odds": 2.3,
-    "mainImage": "https://example.com/second_half_goal.jpg",
+    "mainImage": "https://www.shutterstock.com/shutterstock/photos/1561670803/display_1500/stock-vector-vector-illustration-of-a-football-in-a-net-goal-goal-scored-1561670803.jpg",
+    "teamImage":false,
+
     "date": "Hoy, 9:30 PM",
     "sport": "Fútbol",
     "teams": [
@@ -279,7 +298,9 @@
     "name": 13,
     "bet": "¿Habrá un gol de tiro libre?",
     "odds": 2.4,
-    "mainImage": "https://example.com/free_kick.jpg",
+    "mainImage": "https://profutbolista.com/wp-content/uploads/2017/01/banner2.png",
+    "teamImage":false,
+
     "date": "Mañana, 8:30 PM",
     "sport": "Fútbol",
     "teams": [
@@ -302,7 +323,8 @@
     "name": 14,
     "bet": "¿El equipo Bayer ganará por más de 1 gol?",
     "odds": 1.7,
-    "mainImage": "https://example.com/win_by_2_goals.jpg",
+    "mainImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/FC_Bayern_M%C3%BCnchen_logo_%282017%29.svg/160px-FC_Bayern_M%C3%BCnchen_logo_%282017%29.svg.png",
+    "teamImage":true,
     "date": "Hoy, 7:30 PM",
     "sport": "Fútbol",
     "teams": [
@@ -325,7 +347,8 @@
     "name": 15,
     "bet": "¿Habrá más de 4 goles en la segunda mitad?",
     "odds": 3.0,
-    "mainImage": "https://example.com/second_half_goals.jpg",
+    "mainImage": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTYEvCk3C60HSWRgYIGhKoQLcqDyV12j-aV8g&s",
+    "teamImage":false,
     "date": "Hoy, 10:00 PM",
     "sport": "Fútbol",
     "teams": [
