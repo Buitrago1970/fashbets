@@ -36,7 +36,7 @@ const Cards = () => {
   const [acceptedBetsCount, setAcceptedBetsCount] = useState(0);
   const [showHistoryPopup, setShowHistoryPopup] = useState(false);
   const [initialData, setInitialData] = useState([]);
-  const betTimer = 200000;
+  const betTimer = 20;
 
   const timerRef = useRef(null);
 
