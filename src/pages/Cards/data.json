@@ -657,30 +657,6 @@
     }
   },
   {
-    "name": 32,
-    "bet": "¿Ganará el equipo de Golden State Warriors el próximo partido con más de 10 puntos de diferencia?",
-    "odds": 2.2,
-    "mainImage": "https://upload.wikimedia.org/wikipedia/en/thumb/0/01/Golden_State_Warriors_logo.svg/640px-Golden_State_Warriors_logo.svg.png",
-    "teamImage": true,
-    "date": "Viernes, 9:00 PM",
-    "sport": "Baloncesto",
-    "teams": [
-      {
-        "name": "Golden State Warriors",
-        "score": 0,
-        "image": "https://upload.wikimedia.org/wikipedia/en/thumb/0/01/Golden_State_Warriors_logo.svg/640px-Golden_State_Warriors_logo.svg.png"
-      },
-      {
-        "name": "Phoenix Suns",
-        "score": 0,
-        "image": "https://upload.wikimedia.org/wikipedia/en/thumb/d/dc/Phoenix_Suns_logo.svg/640px-Phoenix_Suns_logo.svg.png"
-      }
-    ],
-    "bettingInfo": {
-      "price": 1500
-    }
-  },
-  {
     "name": 33,
     "bet": "¿Logrará Max Verstappen la pole position en el próximo Gran Premio?",
     "odds": 1.9,
