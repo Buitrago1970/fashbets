@@ -12,3 +12,24 @@
   width: 0%;
   transition: width 0.1s linear;
 }
+@keyframes blink {
+  0% {
+    background-color: #ff2a00; /* Rojo */
+  }
+  25% {
+    background-color: #ff6347; /* Tomate */
+  }
+  50% {
+    background-color: #ff2a00; /* Rojo */
+  }
+  75% {
+    background-color: #ff6347; /* Tomate */
+  }
+  100% {
+    background-color: #ff2a00; /* Rojo */
+  }
+}
+
+.blink {
+  animation: blink 1s infinite;
+}
