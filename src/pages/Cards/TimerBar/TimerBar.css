@@ -5,10 +5,24 @@
   background-color: #ffffff;
   margin-top: 10px;
 }
+
 .timer-progress {
   position: absolute;
   height: 100%;
   background-color: #ff2a00; /* Color de la barra de progreso */
   width: 0%;
   transition: width 0.1s linear;
+}
+
+/* TimerBar.css */
+@keyframes blink {
+  0% { background-color: #ff2a00; }
+  25% { background-color: #ff6f00; }
+  50% { background-color: #ff2a00; }
+  75% { background-color: #ff6f00; }
+  100% { background-color: #ff2a00; }
+}
+
+.timer-progress.blink {
+  animation: blink 0.5s infinite;
 }
