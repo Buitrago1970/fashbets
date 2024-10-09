@@ -4,10 +4,10 @@ import "./HistoryPopup.css";
 function HistoryPopup({ betHistory, closeHistoryPopup }) {
   return (
     <div className="history-popup">
+      <button className="close-button" onClick={closeHistoryPopup}>
+        &times;
+      </button>
       <div className="history-popup-content">
-        <button className="close-button" onClick={closeHistoryPopup}>
-          &times;
-        </button>
         <div className="history-popup-header" onClick={closeHistoryPopup}>
           <h2>Historial de Apuestas Aprobadas</h2>
         </div>
@@ -52,10 +52,10 @@ function HistoryPopup({ betHistory, closeHistoryPopup }) {
             </ul>
           )}
         </div>
+        <button className="close-button-close" onClick={closeHistoryPopup}>
+          Cerrar
+        </button>
       </div>
-      <button className="close-button-close" onClick={closeHistoryPopup}>
-        Cerrar
-      </button>
     </div>
   );
 }
