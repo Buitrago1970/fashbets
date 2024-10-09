@@ -14,10 +14,7 @@ import data from "./data.json";
 // Datos de ejemplo para cada categoría
 const siguiendoData = [];
 
-const recomendadoData = [
- 
- 
-];
+const recomendadoData = [];
 
 const enVivoData = [];
 
@@ -70,7 +67,7 @@ const Cards = () => {
     if (cards.length > 0) {
       setTimer(0);
       clearInterval(timerRef.current);
-      startTimer(cards[0]); 
+      startTimer(cards[0]);
     } else {
       clearInterval(timerRef.current);
     }
@@ -101,10 +98,8 @@ const Cards = () => {
       betStatus = "Aprobada";
       setAcceptedBetsCount((prevCount) => prevCount + 1);
     } else if (direction === "left") {
-
       betStatus = "Rechazada";
     } else if (direction === "timeout") {
-
       betStatus = "Cancelada por tiempo";
     }
 
@@ -117,7 +112,7 @@ const Cards = () => {
         odds: swipedCard.odds,
         sport: swipedCard.sport,
         teams: swipedCard.teams,
-        price: swipedCard.bettingInfo.price
+        price: swipedCard.bettingInfo.price,
       },
     ]);
 
@@ -159,7 +154,7 @@ const Cards = () => {
       {/* Barra de progreso del temporizador */}
       <div className="timer-conatainer">
         <TimerBar progressPercentage={progressPercentage} />
-      </div> 
+      </div>
 
       {/* Contenedor de tarjetas */}
       <div className="cards-container">
@@ -172,7 +167,6 @@ const Cards = () => {
         acceptedBetsCount={acceptedBetsCount}
         handleHistoryClick={handleHistoryClick}
       />
-
 
       {/* Pop-up de historial de apuestas */}
       {showHistoryPopup && (

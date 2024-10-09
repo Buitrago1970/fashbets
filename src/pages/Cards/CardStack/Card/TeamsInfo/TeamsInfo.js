@@ -1,11 +1,33 @@
 import React, { useState } from "react";
 import "./TeamsInfo.css";
 
-function TeamsInfo({ sport, bet, odds, mainImage, date, teams, initialPrice, teamImage }) {
+import baloncesto from "../../../../../assets/baloncesto.svg";
+import futball from "../../../../../assets/futball.svg";
+import tenis from "../../../../../assets/tenis.svg";
+import Americano from "../../../../../assets/Americano.svg";
+import golf from "../../../../../assets/golf.svg";
+import f1 from "../../../../../assets/f1.svg";
+import mma from "../../../../../assets/mma.svg";
+
+function TeamsInfo({
+  sport,
+  bet,
+  odds,
+  mainImage,
+  date,
+  teams,
+  initialPrice,
+  teamImage,
+}) {
   const [price, setPrice] = useState(initialPrice);
 
   const formatToCOP = (value) => {
-    return new Intl.NumberFormat("es-CO", { style: "currency", currency: "COP" }).format(value).replace(/,00$/, "");
+    return new Intl.NumberFormat("es-CO", {
+      style: "currency",
+      currency: "COP",
+    })
+      .format(value)
+      .replace(/,00$/, "");
   };
 
   const increasePrice = () => {
@@ -22,7 +44,17 @@ function TeamsInfo({ sport, bet, odds, mainImage, date, teams, initialPrice, tea
         <p className="card__content-teams-info-bet-text">{bet}</p>
         <div className="card__content-header">
           <div className="card__content-header-icon">
-            <img src="https://img.icons8.com/ios/50/000000/football2.png" alt="sport icon" />
+            {sport === "Baloncesto" && (
+              <img src={baloncesto} alt="baloncesto" />
+            )}
+            {sport === "Fútbol" && <img src={futball} alt="futball" />}
+            {sport === "Tenis" && <img src={tenis} alt="tenis" />}
+            {sport === "Fútbol Americano" && (
+              <img src={Americano} alt="Americano" />
+            )}
+            {sport === "Golf" && <img src={golf} alt="golf" />}
+            {sport === "Fórmula 1" && <img src={f1} alt="f1" />}
+            {sport === "MMA" && <img src={mma} alt="mma" />}
           </div>
           <p className="card__content-header-text">{sport}</p>
         </div>
@@ -30,7 +62,11 @@ function TeamsInfo({ sport, bet, odds, mainImage, date, teams, initialPrice, tea
       <div className="card__content-teams-info-odds">{odds}X</div>
       <div className="card__content-teams-info-date">{date}</div>
       <div className="card__content-teams-info-container-main-image">
-        <div className={`card__content-teams-info-main-image  ${teamImage ? "team-image-true" : "team-image-false"}`}>
+        <div
+          className={`card__content-teams-info-main-image  ${
+            teamImage ? "team-image-true" : "team-image-false"
+          }`}
+        >
           <img src={mainImage} alt="main team" />
         </div>
       </div>
@@ -51,7 +87,9 @@ function TeamsInfo({ sport, bet, odds, mainImage, date, teams, initialPrice, tea
         <p>{formatToCOP(price)}</p>
         <button onClick={increasePrice}>+</button>
       </div>
-      <div className="card__content-teams-info-potential-payment">{formatToCOP(price * odds)}</div>
+      <div className="card__content-teams-info-potential-payment">
+        {formatToCOP(price * odds)}
+      </div>
     </div>
   );
 }

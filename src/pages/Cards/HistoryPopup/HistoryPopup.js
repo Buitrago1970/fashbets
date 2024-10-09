@@ -8,7 +8,7 @@ function HistoryPopup({ betHistory, closeHistoryPopup }) {
         <button className="close-button" onClick={closeHistoryPopup}>
           &times;
         </button>
-        <div className="history-popup-header">
+        <div className="history-popup-header" onClick={closeHistoryPopup}>
           <h2>Historial de Apuestas Aprobadas</h2>
         </div>
         <div className="history-popup-body">
@@ -17,7 +17,12 @@ function HistoryPopup({ betHistory, closeHistoryPopup }) {
           ) : (
             <ul className="bet-list">
               {betHistory.map((bet, index) => (
-                <li key={index} className={`bet-item ${bet.status === "Aprobada" ? "green" : "red"}`}>
+                <li
+                  key={index}
+                  className={`bet-item ${
+                    bet.status === "Aprobada" ? "green" : "red"
+                  }`}
+                >
                   <div className="bet-info">
                     <h3 className="bet-name">{bet.name}</h3>
                     <p className="bet-details">
@@ -25,15 +30,14 @@ function HistoryPopup({ betHistory, closeHistoryPopup }) {
                     </p>
                     <div className="card__content-teams-info-teams">
                       {bet.teams.map((team, idx) => (
-                       <div className="card__content-teams-info-teams">
-                       <div>
-                         <div className="card__content-teams-info-teams-team">
-                           <img src={team.image} alt={team.name} />
-                           <div>{team.name}</div>
-                         </div>
-               
-                       </div>
-                     </div>
+                        <div className="card__content-teams-info-teams">
+                          <div>
+                            <div className="card__content-teams-info-teams-team">
+                              <img src={team.image} alt={team.name} />
+                              <div>{team.name}</div>
+                            </div>
+                          </div>
+                        </div>
                       ))}
                     </div>
                     <p className="bet-details">
@@ -49,6 +53,9 @@ function HistoryPopup({ betHistory, closeHistoryPopup }) {
           )}
         </div>
       </div>
+      <button className="close-button-close" onClick={closeHistoryPopup}>
+        Cerrar
+      </button>
     </div>
   );
 }

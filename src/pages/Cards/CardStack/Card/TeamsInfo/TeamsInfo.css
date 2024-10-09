@@ -1,4 +1,4 @@
-.card__content-teams-info{
+.card__content-teams-info {
   padding: 10px;
 }
 .card__content-header-icon {
@@ -42,7 +42,7 @@
   min-height: 80px;
   margin-bottom: 15px;
 }
-.card__content-teams-info-bet-text{
+.card__content-teams-info-bet-text {
   margin: 0;
 }
 
@@ -50,7 +50,7 @@
   color: #45a3ff;
   text-align: center;
   font-family: Poppins;
-  font-size: 25px;
+  font-size: 22px;
   font-style: normal;
   font-weight: 700;
   line-height: normal;
@@ -65,6 +65,7 @@
   align-items: center;
   justify-content: center;
   margin: 25px 0px;
+  margin-top: 5px;
 }
 .card__content-teams-info-main-image {
   width: 100px;
@@ -76,11 +77,10 @@
   height: 100%;
 }
 
-.team-image-true{
+.team-image-true {
   object-fit: contain;
-
 }
-.team-image-false{
+.team-image-false {
   object-fit: cover;
   border-radius: 10px;
   width: 150px;
@@ -93,6 +93,7 @@
   font-style: normal;
   font-weight: 500;
   line-height: normal;
+  margin-top: 20px;
 }
 .card__content-teams-info-teams {
   display: flex;
@@ -173,7 +174,7 @@
   display: flex;
   align-items: center;
   gap: 15px;
-  margin: 10px 0;
+  margin: 15px 0;
 }
 
 .card__content-teams-info-price button {
@@ -185,16 +186,18 @@
   cursor: pointer;
   font-size: 16px;
   transition: background-color 0.3s ease;
-  border: 1px solid #bababa;
   height: 23px;
-}
-
-.card__content-teams-info-price button:hover {
-  border: 1px solid rgb(0, 0, 0);
 }
 
 .card__content-teams-info-price p {
   margin: 0;
   font-size: 18px;
   font-weight: bold;
+}
+
+@media (max-width: 400px) {
+  .card__content-teams-info-bet {
+    font-size: 18px;
+    width: 100%;
+  }
 }
