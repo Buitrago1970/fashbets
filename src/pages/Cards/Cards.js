@@ -107,6 +107,7 @@ const Cards = () => {
       showDeclinePopup();
     } else if (direction === "timeout") {
       betStatus = "Cancelada por tiempo";
+      showDeclinePopup();
     }
 
     setBetHistory((prevHistory) => [

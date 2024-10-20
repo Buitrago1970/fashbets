@@ -9,28 +9,29 @@
 .timer-progress {
   position: absolute;
   height: 100%;
-  background-color: #ff2a00; /* Color de la barra de progreso */
+  background-color: #ff0000; /* Color rojo vibrante */
   width: 0%;
   transition: width 0.1s linear;
 }
+
 @keyframes blink {
   0% {
-    background-color: #ff2a00; /* Rojo */
+    background-color: #ff0000; /* Rojo vibrante */
   }
   25% {
-    background-color: #ff6347; /* Tomate */
+    background-color: #ff7f00; /* Naranja fuerte */
   }
   50% {
-    background-color: #ff2a00; /* Rojo */
+    background-color: #ffff00; /* Amarillo intenso */
   }
   75% {
-    background-color: #ff6347; /* Tomate */
+    background-color: #ff7f00; /* Naranja fuerte */
   }
   100% {
-    background-color: #ff2a00; /* Rojo */
+    background-color: #ff0000; /* Rojo vibrante */
   }
 }
 
 .blink {
-  animation: blink 1s infinite;
+  animation: blink 1s infinite; /* Tiempo de ciclo más largo para una transición más suave */
 }
