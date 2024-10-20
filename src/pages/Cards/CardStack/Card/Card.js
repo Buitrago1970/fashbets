@@ -13,15 +13,35 @@ function Card({ card, onSwipe, zIndex, shouldWiggle }) {
 
   useEffect(() => {
     if (shouldWiggle && !isDragging.current) {
-      wiggleAnimation.current = gsap.to(cardRef.current, {
-        x: "+=5",
-        rotation: "+=2",
-        duration: 0.6,
-        yoyo: true,
+      const timeline = gsap.timeline({
         repeat: -1,
+        yoyo: true,
         ease: "sine.inOut",
-        overwrite: true, // Evita conflictos con otras animaciones
       });
+
+      timeline
+        .to(cardRef.current, {
+          x: "+=10", // Movimiento hacia la derecha
+          rotation: "+=2",
+          duration: 0.3,
+        })
+        .to(cardRef.current, {
+          x: 0, // Regresa al centro
+          rotation: 0,
+          duration: 0.3,
+        })
+        .to(cardRef.current, {
+          x: "-=10", // Movimiento hacia la izquierda
+          rotation: "-=2",
+          duration: 0.3,
+        })
+        .to(cardRef.current, {
+          x: 0, // Regresa al centro de nuevo
+          rotation: 0,
+          duration: 0.3,
+        });
+
+      wiggleAnimation.current = timeline;
     } else if (!shouldWiggle && wiggleAnimation.current) {
       wiggleAnimation.current.kill();
       wiggleAnimation.current = null;
