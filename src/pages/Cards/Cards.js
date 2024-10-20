@@ -83,7 +83,7 @@ const Cards = () => {
           onSwipe("timeout", card?.name);
           return 0;
         }
-        if (prevTimer >= duration - 10) {
+        if (prevTimer >= duration - 17) {
           setShouldWiggle(true);
         } else {
           setShouldWiggle(false);
@@ -101,7 +101,7 @@ const Cards = () => {
     if (direction === "right") {
       betStatus = "Aprobada";
       setAcceptedBetsCount((prevCount) => prevCount + 1);
-      showApprovedPopup();
+      showApprovedPopup(swipedCard.bettingInfo.price);
     } else if (direction === "left") {
       betStatus = "Rechazada";
       showDeclinePopup();
@@ -133,56 +133,48 @@ const Cards = () => {
       return newCards;
     });
   };
-
   const showDeclinePopup = () => {
     Swal.fire({
       title: "¡Apuesta Rechazada!",
       text: "Has rechazado la apuesta",
-      background: "#f7f7f7", // Un fondo suave
-      width: 300, // Reducir el tamaño del popup
-      padding: "1em", // Hacer el padding más pequeño
+      width: 280, // Reducimos el ancho
+      padding: "0.8em", // Reducimos el padding
       color: "#000",
       icon: "error",
       iconColor: "#ff6347",
-      backdrop: `
-        rgba(0,0,123,0.1) // Hacer el fondo de la pantalla más sutil
-      `,
       customClass: {
         title: "poster-title",
         popup: "poster-popup",
       },
       showConfirmButton: false,
-      timer: 2000, // Duración de 2 segundos
-      timerProgressBar: false, // Eliminamos la barra de progreso para mayor simplicidad
-      position: "top", // Posicionar en la parte superior
-      toast: true, // Lo hace menos invasivo como una notificación tipo "toast"
+      timer: 2000,
+      timerProgressBar: false,
+      position: "top",
+      toast: true,
+      allowOutsideClick: true,
     });
   };
-  const showApprovedPopup = () => {
+
+  const showApprovedPopup = (price) => {
     Swal.fire({
       title: "¡Apuesta Aprobada!",
-      text: "Tu apuesta está en juego, ¡vamos a ganar!",
-      background: "#f0f5f1", // Fondo verde suave
-      width: 350,
-      padding: "1.5em",
+      html: `Tu apuesta de <span class="popup-price">${price}</span> está en juego, ¡vamos a ganar!`,
+      width: 300, // Reducimos el ancho
+      padding: "1em", // Reducimos el padding
       color: "#333",
       icon: "success",
-      iconColor: "#28a745", // Verde de éxito
-      backdrop: `
-        rgba(0,0,0,0.4)
-        url("https://media.giphy.com/media/5GoVLqeAOo6PK/giphy.gif")  // GIF de confeti animado
-        center top
-        no-repeat
-      `,
+      iconColor: "#28a745",
       customClass: {
         title: "approved-title",
         popup: "approved-popup",
+        htmlContainer: "popup-content",
       },
       showConfirmButton: false,
-      timer: 2500, // Dura 2.5 segundos
-      timerProgressBar: true,
-      position: "center",
+      timer: 2500,
+      timerProgressBar: false,
+      position: "top",
       toast: true,
+      allowOutsideClick: true,
     });
   };
   const swipeCard = (direction) => {

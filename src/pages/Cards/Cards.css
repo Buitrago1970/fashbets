@@ -10,53 +10,54 @@
   justify-content: center;
   margin-top: 10px;
 }
+
 .poster-title {
-  font-family: "Bebas Neue", cursive;
-  font-size: 1.8em; /* Reducir el tamaño del título */
-  color: #ff6347;
-  text-shadow: 1px 1px #000;
+  font-family: "Comic Neue", cursive;
+  font-size: 1.8em;
+  color: #ff0044;
+  text-shadow: 2px 2px #fff;
+}
+
+.approved-title {
+  font-family: "Comic Neue", cursive;
+  font-size: 1.8em;
+  color: #28a745; /* Verde para el título aprobado */
+  text-shadow: 2px 2px #fff;
 }
 
 .poster-popup {
-  border: 2px dashed #ff6347; /* Hacer el borde más delgado */
-  border-radius: 8px; /* Bordes más suaves */
-  background: linear-gradient(45deg, #f7f7f7, #e3e3e3); /* Colores suaves */
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3); /* Sombra más sutil */
-}
-.approved-title {
-  font-family: "Poppins", sans-serif;
-  font-size: 2em;
-  color: #28a745; /* Verde brillante */
-  text-shadow: 2px 2px #ffffff;
-  animation: pulse 0.5s ease infinite alternate; /* Pulsación rápida */
+  border: 4px double #ff0044;
+  border-radius: 15px;
+  background: linear-gradient(135deg, #fff0f5, #ffe4e1);
+  box-shadow: 10px 10px 0px #000;
 }
 
 .approved-popup {
-  border: 3px solid #28a745;
-  border-radius: 10px;
-  background: #f0f5f1; /* Verde claro */
-  box-shadow: 0 0 15px rgba(0, 0, 0, 0.4);
-  animation: bounceIn 0.5s ease-out;
+  border: 4px double #28a745; /* Borde verde */
+  border-radius: 15px;
+  background: linear-gradient(135deg, #eaffea, #d4f7d4); /* Fondo verde claro */
+  box-shadow: 10px 10px 0px #000;
 }
 
-/* Animación de pulsación para el título */
-@keyframes pulse {
-  0% {
-    transform: scale(1);
+.popup-price {
+  .popup-price {
+    font-size: 1.5em; /* Reducimos el tamaño */
+    color: #28a745; /* Mantenemos el color verde */
+    font-weight: bold;
+    text-shadow: 1px 1px #fff, 2px 2px #000; /* Reducimos las sombras */
+    animation: pop 0.3s ease-in-out; /* Acortamos la duración de la animación */
   }
-  100% {
-    transform: scale(1.05);
-  }
-}
 
-/* Animación de entrada */
-@keyframes bounceIn {
-  0% {
-    transform: scale(0.9);
-    opacity: 0;
-  }
-  100% {
-    transform: scale(1);
-    opacity: 1;
+  /* Animación para el texto del precio */
+  @keyframes pop {
+    0% {
+      transform: scale(0.95);
+    }
+    50% {
+      transform: scale(1.05);
+    }
+    100% {
+      transform: scale(1);
+    }
   }
 }

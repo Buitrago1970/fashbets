@@ -3,7 +3,7 @@ import gsap from "gsap";
 import TeamsInfo from "./TeamsInfo/TeamsInfo";
 import "./Card.css";
 
-function Card({ card, onSwipe, zIndex, shouldWiggle }) {
+function Card({ card, onSwipe, zIndex, shouldWiggle, onCardClick }) {
   const cardRef = useRef(null);
   const startX = useRef(0);
   const currentX = useRef(0);
@@ -12,40 +12,20 @@ function Card({ card, onSwipe, zIndex, shouldWiggle }) {
   const wiggleAnimation = useRef(null);
 
   useEffect(() => {
-    if (shouldWiggle && !isDragging.current) {
-      const timeline = gsap.timeline({
-        repeat: -1,
-        yoyo: true,
-        ease: "sine.inOut",
-      });
+    if (shouldWiggle) {
+      const timeline = gsap.timeline({ repeat: -1, ease: "power1.inOut" });
 
       timeline
-        .to(cardRef.current, {
-          x: "+=10", // Movimiento hacia la derecha
-          rotation: "+=2",
-          duration: 0.3,
-        })
-        .to(cardRef.current, {
-          x: 0, // Regresa al centro
-          rotation: 0,
-          duration: 0.3,
-        })
-        .to(cardRef.current, {
-          x: "-=10", // Movimiento hacia la izquierda
-          rotation: "-=2",
-          duration: 0.3,
-        })
-        .to(cardRef.current, {
-          x: 0, // Regresa al centro de nuevo
-          rotation: 0,
-          duration: 0.3,
-        });
+        .to(cardRef.current, { x: -10, duration: 0.3 }) // Izquierda al medio
+        .to(cardRef.current, { x: 0, duration: 0.3 }) // Medio
+        .to(cardRef.current, { x: 10, duration: 0.3 }) // Medio a derecha
+        .to(cardRef.current, { x: 0, duration: 0.3 }); // Regresa al medio
 
       wiggleAnimation.current = timeline;
-    } else if (!shouldWiggle && wiggleAnimation.current) {
+    } else if (wiggleAnimation.current) {
       wiggleAnimation.current.kill();
       wiggleAnimation.current = null;
-      gsap.to(cardRef.current, { x: 0, rotation: 0, duration: 0.2 });
+      gsap.to(cardRef.current, { x: 0, rotation: 0, duration: 0.3 });
     }
   }, [shouldWiggle]);
 
