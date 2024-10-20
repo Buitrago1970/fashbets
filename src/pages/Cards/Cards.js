@@ -6,6 +6,7 @@ import CardStack from "./CardStack/CardStack";
 import ActionButtons from "./ActionButtons/ActionButtons";
 import TimerBar from "./TimerBar/TimerBar";
 import HistoryPopup from "./HistoryPopup/HistoryPopup";
+import Swal from "sweetalert2";
 
 import "./Cards.css";
 
@@ -95,19 +96,19 @@ const Cards = () => {
   const onSwipe = (direction, name) => {
     if (!name) return;
     const swipedCard = cards.find((card) => card.name === name);
-
-    let betStatus = "Rechazada";
+    let betStatus = "";
 
     if (direction === "right") {
       betStatus = "Aprobada";
       setAcceptedBetsCount((prevCount) => prevCount + 1);
+      showApprovedPopup();
     } else if (direction === "left") {
       betStatus = "Rechazada";
+      showDeclinePopup();
     } else if (direction === "timeout") {
       betStatus = "Cancelada por tiempo";
     }
 
-    // Agregar la apuesta al historial con el estado correspondiente
     setBetHistory((prevHistory) => [
       ...prevHistory,
       {
@@ -133,6 +134,57 @@ const Cards = () => {
     });
   };
 
+  const showDeclinePopup = () => {
+    Swal.fire({
+      title: "¡Apuesta Rechazada!",
+      text: "Has rechazado la apuesta",
+      background: "#f7f7f7", // Un fondo suave
+      width: 300, // Reducir el tamaño del popup
+      padding: "1em", // Hacer el padding más pequeño
+      color: "#000",
+      icon: "error",
+      iconColor: "#ff6347",
+      backdrop: `
+        rgba(0,0,123,0.1) // Hacer el fondo de la pantalla más sutil
+      `,
+      customClass: {
+        title: "poster-title",
+        popup: "poster-popup",
+      },
+      showConfirmButton: false,
+      timer: 2000, // Duración de 2 segundos
+      timerProgressBar: false, // Eliminamos la barra de progreso para mayor simplicidad
+      position: "top", // Posicionar en la parte superior
+      toast: true, // Lo hace menos invasivo como una notificación tipo "toast"
+    });
+  };
+  const showApprovedPopup = () => {
+    Swal.fire({
+      title: "¡Apuesta Aprobada!",
+      text: "Tu apuesta está en juego, ¡vamos a ganar!",
+      background: "#f0f5f1", // Fondo verde suave
+      width: 350,
+      padding: "1.5em",
+      color: "#333",
+      icon: "success",
+      iconColor: "#28a745", // Verde de éxito
+      backdrop: `
+        rgba(0,0,0,0.4)
+        url("https://media.giphy.com/media/5GoVLqeAOo6PK/giphy.gif")  // GIF de confeti animado
+        center top
+        no-repeat
+      `,
+      customClass: {
+        title: "approved-title",
+        popup: "approved-popup",
+      },
+      showConfirmButton: false,
+      timer: 2500, // Dura 2.5 segundos
+      timerProgressBar: true,
+      position: "center",
+      toast: true,
+    });
+  };
   const swipeCard = (direction) => {
     if (cards.length === 0) return;
     const currentCard = cards[0];

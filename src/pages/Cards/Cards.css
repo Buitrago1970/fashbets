@@ -10,3 +10,53 @@
   justify-content: center;
   margin-top: 10px;
 }
+.poster-title {
+  font-family: "Bebas Neue", cursive;
+  font-size: 1.8em; /* Reducir el tamaño del título */
+  color: #ff6347;
+  text-shadow: 1px 1px #000;
+}
+
+.poster-popup {
+  border: 2px dashed #ff6347; /* Hacer el borde más delgado */
+  border-radius: 8px; /* Bordes más suaves */
+  background: linear-gradient(45deg, #f7f7f7, #e3e3e3); /* Colores suaves */
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3); /* Sombra más sutil */
+}
+.approved-title {
+  font-family: "Poppins", sans-serif;
+  font-size: 2em;
+  color: #28a745; /* Verde brillante */
+  text-shadow: 2px 2px #ffffff;
+  animation: pulse 0.5s ease infinite alternate; /* Pulsación rápida */
+}
+
+.approved-popup {
+  border: 3px solid #28a745;
+  border-radius: 10px;
+  background: #f0f5f1; /* Verde claro */
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.4);
+  animation: bounceIn 0.5s ease-out;
+}
+
+/* Animación de pulsación para el título */
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.05);
+  }
+}
+
+/* Animación de entrada */
+@keyframes bounceIn {
+  0% {
+    transform: scale(0.9);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
