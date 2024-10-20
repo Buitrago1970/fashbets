@@ -1,21 +1,46 @@
-import React, { useRef, useState } from "react";
+import React, { useRef, useState, useEffect } from "react";
 import gsap from "gsap";
 import TeamsInfo from "./TeamsInfo/TeamsInfo";
 import "./Card.css";
 
-function Card({ card, onSwipe, zIndex }) {
+function Card({ card, onSwipe, zIndex, shouldWiggle }) {
   const cardRef = useRef(null);
   const startX = useRef(0);
   const currentX = useRef(0);
   const isDragging = useRef(false);
   const [bgColor, setBgColor] = useState("white");
+  const wiggleAnimation = useRef(null);
+
+  useEffect(() => {
+    if (shouldWiggle && !isDragging.current) {
+      wiggleAnimation.current = gsap.to(cardRef.current, {
+        x: "+=5",
+        rotation: "+=2",
+        duration: 0.6,
+        yoyo: true,
+        repeat: -1,
+        ease: "sine.inOut",
+        overwrite: true, // Evita conflictos con otras animaciones
+      });
+    } else if (!shouldWiggle && wiggleAnimation.current) {
+      wiggleAnimation.current.kill();
+      wiggleAnimation.current = null;
+      gsap.to(cardRef.current, { x: 0, rotation: 0, duration: 0.2 });
+    }
+  }, [shouldWiggle]);
 
   const handleDragStart = (e) => {
     e.preventDefault();
+    if (wiggleAnimation.current) {
+      wiggleAnimation.current.kill();
+      wiggleAnimation.current = null;
+      // No resetear x y rotation aquí
+      // gsap.set(cardRef.current, { x: 0, rotation: 0 });
+    }
     isDragging.current = true;
-    startX.current = e.type.includes("touch")
-      ? e.touches[0].clientX
-      : e.clientX;
+    const clientX = e.type.includes("touch") ? e.touches[0].clientX : e.clientX;
+    const currentXPosition = gsap.getProperty(cardRef.current, "x");
+    startX.current = clientX - currentXPosition;
   };
 
   const handleDragMove = (e) => {
@@ -25,13 +50,11 @@ function Card({ card, onSwipe, zIndex }) {
     const clientX = e.type.includes("touch") ? e.touches[0].clientX : e.clientX;
     currentX.current = clientX - startX.current;
 
-    const rotation = (currentX.current / window.innerWidth) * 33; // Efecto de rotación
-    gsap.to(cardRef.current, {
+    const rotation = (currentX.current / window.innerWidth) * 15; // Efecto de rotación más sutil
+    gsap.set(cardRef.current, {
       x: currentX.current,
       rotation,
-      duration: 0,
     });
-
     // Calcular el porcentaje de deslizamiento
     const swipePercentage = Math.abs(currentX.current) / window.innerWidth;
 
@@ -67,6 +90,7 @@ function Card({ card, onSwipe, zIndex }) {
   const handleDragEnd = () => {
     if (!isDragging.current) return;
     isDragging.current = false;
+
     if (Math.abs(currentX.current) > 50) {
       const direction = currentX.current > 0 ? "right" : "left";
       const endX =
@@ -79,23 +103,44 @@ function Card({ card, onSwipe, zIndex }) {
         onComplete: () => {
           onSwipe(direction, card.name);
           setBgColor("white"); // Restablecer el color de fondo
+          currentX.current = 0;
+
+          // No reiniciamos la animación de wiggle si la tarjeta se ha deslizado fuera
         },
       });
     } else {
-      gsap.to(cardRef.current, { x: 0, rotation: 0, duration: 0.3 });
-      setBgColor("white"); // Restablecer el color de fondo
-    }
-    currentX.current = 0;
-  };
+      gsap.to(cardRef.current, {
+        x: 0,
+        rotation: 0,
+        duration: 0.3,
+        onComplete: () => {
+          currentX.current = 0;
+          setBgColor("white"); // Restablecer el color de fondo
 
+          // Reiniciar la animación de wiggle si es necesario
+          if (shouldWiggle) {
+            wiggleAnimation.current = gsap.to(cardRef.current, {
+              x: "+=5",
+              rotation: "+=2",
+              duration: 0.6,
+              yoyo: true,
+              repeat: -1,
+              ease: "sine.inOut",
+              overwrite: true,
+            });
+          }
+        },
+      });
+    }
+  };
   return (
     <div
       className="card"
       ref={cardRef}
       style={{
         zIndex,
-        touchAction: 'none',
-        backgroundColor: bgColor, // Aplicar el color de fondo
+        touchAction: "none",
+        backgroundColor: bgColor,
       }}
       onTouchStart={handleDragStart}
       onTouchMove={handleDragMove}

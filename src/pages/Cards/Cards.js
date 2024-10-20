@@ -13,9 +13,7 @@ import data from "./data.json";
 
 // Datos de ejemplo para cada categoría
 const siguiendoData = [];
-
 const recomendadoData = [];
-
 const enVivoData = [];
 
 const shuffleArray = (array) => {
@@ -36,6 +34,7 @@ const Cards = () => {
   const [acceptedBetsCount, setAcceptedBetsCount] = useState(0);
   const [showHistoryPopup, setShowHistoryPopup] = useState(false);
   const [initialData, setInitialData] = useState([]);
+  const [shouldWiggle, setShouldWiggle] = useState(false);
   const betTimer = 20;
 
   const timerRef = useRef(null);
@@ -82,6 +81,11 @@ const Cards = () => {
           // Si el tiempo se agota y no se hizo swipe, se cancela la apuesta
           onSwipe("timeout", card?.name);
           return 0;
+        }
+        if (prevTimer >= duration - 10) {
+          setShouldWiggle(true);
+        } else {
+          setShouldWiggle(false);
         }
         return prevTimer + 0.1; // Incrementa el timer cada 100ms
       });
@@ -132,7 +136,6 @@ const Cards = () => {
   const swipeCard = (direction) => {
     if (cards.length === 0) return;
     const currentCard = cards[0];
-
     onSwipe(direction, currentCard.name);
   };
 
@@ -158,7 +161,11 @@ const Cards = () => {
 
       {/* Contenedor de tarjetas */}
       <div className="cards-container">
-        <CardStack cards={cards} onSwipe={onSwipe} />
+        <CardStack
+          cards={cards}
+          onSwipe={onSwipe}
+          shouldWiggle={shouldWiggle}
+        />
       </div>
 
       {/* Botones de acción y botón de historial */}
