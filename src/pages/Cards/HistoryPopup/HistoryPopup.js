@@ -52,9 +52,11 @@ function HistoryPopup({ betHistory, closeHistoryPopup }) {
             </ul>
           )}
         </div>
-        <button className="close-button-close" onClick={closeHistoryPopup}>
-          Cerrar
-        </button>
+        <div className="history-popup-footer">
+          <button className="button-cerrar" onClick={closeHistoryPopup}>
+            Cerrar
+          </button>
+        </div>
       </div>
     </div>
   );

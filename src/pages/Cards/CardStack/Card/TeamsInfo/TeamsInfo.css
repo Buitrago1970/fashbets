@@ -179,7 +179,7 @@
 
 .card__content-teams-info-price button {
   width: 23px;
-  background-color: #ffffff;
+  background-color: transparent;
   color: #000000;
   border: none;
   border-radius: 47px;

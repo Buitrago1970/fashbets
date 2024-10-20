@@ -59,10 +59,6 @@
   z-index: 99;
 }
 
-.close-button:hover {
-  color: #000;
-}
-
 /* Lista de apuestas */
 .bet-list {
   list-style: none;
@@ -119,6 +115,20 @@
   color: #777;
   margin-top: 50px;
   font-size: 16px;
+}
+
+.history-popup-footer {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+.button-cerrar {
+  background-color: #002361;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  border: none;
 }
 
 /* Responsividad */
