@@ -3,7 +3,7 @@
   min-height: 533px;
   max-height: 533px;
   padding: 0 7%;
-  max-width: 500px; 
+  max-width: 500px;
   margin: 10px auto;
 }
 
@@ -14,14 +14,12 @@
 }
 
 .poster-title {
-  font-family: "Comic Neue", cursive;
   font-size: 1.8em;
   color: #ff0044;
   text-shadow: 2px 2px #fff;
 }
 
 .approved-title {
-  font-family: "Comic Neue", cursive;
   font-size: 1.8em;
   color: #28a745; /* Verde para el título aprobado */
   text-shadow: 2px 2px #fff;
@@ -62,4 +60,7 @@
       transform: scale(1);
     }
   }
+}
+.swal2-popup.swal2-toast .swal2-title {
+  margin: 0.5em 0em;
 }

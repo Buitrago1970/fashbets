@@ -37,6 +37,8 @@ const Cards = () => {
   const [initialData, setInitialData] = useState([]);
   const [shouldWiggle, setShouldWiggle] = useState(false);
   const betTimer = 20;
+  const [MaxAlert, setMaxAlert] = useState(0);
+  const [MSxAlertFail, setMSxAlertFail] = useState(0);
 
   const timerRef = useRef(null);
 
@@ -135,48 +137,52 @@ const Cards = () => {
     });
   };
   const showDeclinePopup = () => {
-    Swal.fire({
-      title: "¡Apuesta Rechazada!",
-      text: "Has rechazado la apuesta",
-      width: 280, // Reducimos el ancho
-      padding: "0.8em", // Reducimos el padding
-      color: "#000",
-      icon: "error",
-      iconColor: "#ff6347",
-      customClass: {
-        title: "poster-title",
-        popup: "poster-popup",
-      },
-      showConfirmButton: false,
-      timer: 2000,
-      timerProgressBar: false,
-      position: "top",
-      toast: true,
-      allowOutsideClick: true,
-    });
+    if (MSxAlertFail <= 6) {
+      Swal.fire({
+        title: "¡Apuesta Rechazada!",
+        width: 280, // Reducimos el ancho
+        padding: "0.8em", // Reducimos el padding
+        color: "#000",
+        icon: "error",
+        iconColor: "#ff6347",
+        customClass: {
+          title: "poster-title",
+          popup: "poster-popup",
+        },
+        showConfirmButton: false,
+        timer: 2000,
+        timerProgressBar: false,
+        position: "top",
+        toast: true,
+        allowOutsideClick: true,
+      });
+    }
+    setMSxAlertFail(MSxAlertFail + 1);
   };
 
-  const showApprovedPopup = (price) => {
-    Swal.fire({
-      title: "¡Apuesta Aprobada!",
-      html: `Tu apuesta de <span class="popup-price">${price}</span> está en juego, ¡vamos a ganar!`,
-      width: 300, // Reducimos el ancho
-      padding: "1em", // Reducimos el padding
-      color: "#333",
-      icon: "success",
-      iconColor: "#28a745",
-      customClass: {
-        title: "approved-title",
-        popup: "approved-popup",
-        htmlContainer: "popup-content",
-      },
-      showConfirmButton: false,
-      timer: 2500,
-      timerProgressBar: false,
-      position: "top",
-      toast: true,
-      allowOutsideClick: true,
-    });
+  const showApprovedPopup = () => {
+    if (MaxAlert <= 6) {
+      Swal.fire({
+        title: "¡Apuesta Aprobada!",
+        width: 300, // Reducimos el ancho
+        padding: "1em", // Reducimos el padding
+        color: "#333",
+        icon: "success",
+        iconColor: "#28a745",
+        customClass: {
+          title: "approved-title",
+          popup: "approved-popup",
+          htmlContainer: "popup-content",
+        },
+        showConfirmButton: false,
+        timer: 2500,
+        timerProgressBar: false,
+        position: "top",
+        toast: true,
+        allowOutsideClick: true,
+      });
+      setMaxAlert(MaxAlert + 1);
+    }
   };
   const swipeCard = (direction) => {
     if (cards.length === 0) return;
