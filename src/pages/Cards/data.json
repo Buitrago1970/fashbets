@@ -149,17 +149,17 @@
   },
   {
     "name": 7,
-    "bet": "¿El equipo Millonarios anotará en ambas mitades?",
+    "bet": "¿El equipo Santa Fe anotará en ambas mitades?",
     "odds": 2.0,
-    "mainImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7d/Escudo_de_Millonarios_F%C3%BAtbol_Club.svg/2048px-Escudo_de_Millonarios_F%C3%BAtbol_Club.svg.png",
+    "mainImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/58/Escudo_de_Independiente_Santa_Fe.png/150px-Escudo_de_Independiente_Santa_Fe.png",
     "teamImage": true,
     "date": "Mañana, 3:00 PM",
     "sport": "Fútbol",
     "teams": [
       {
-        "name": "Millonarios",
+        "name": "Santa Fe",
         "score": 1,
-        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7d/Escudo_de_Millonarios_F%C3%BAtbol_Club.svg/2048px-Escudo_de_Millonarios_F%C3%BAtbol_Club.svg.png"
+        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/58/Escudo_de_Independiente_Santa_Fe.png/150px-Escudo_de_Independiente_Santa_Fe.png"
       },
       {
         "name": "Nacional",
