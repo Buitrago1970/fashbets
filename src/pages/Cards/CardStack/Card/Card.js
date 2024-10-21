@@ -16,10 +16,10 @@ function Card({ card, onSwipe, zIndex, shouldWiggle, onCardClick }) {
       const timeline = gsap.timeline({ repeat: -1, ease: "power1.inOut" });
 
       timeline
-        .to(cardRef.current, { x: -10, duration: 0.3 }) // Izquierda al medio
-        .to(cardRef.current, { x: 0, duration: 0.3 }) // Medio
-        .to(cardRef.current, { x: 10, duration: 0.3 }) // Medio a derecha
-        .to(cardRef.current, { x: 0, duration: 0.3 }); // Regresa al medio
+        .to(cardRef.current, { x: -22, rotation: -2, duration: 0.5 }) // Izquierda con rotación
+        .to(cardRef.current, { x: 0, rotation: 0, duration: 0.5 }) // Regresa al centro
+        .to(cardRef.current, { x: 22, rotation: 2, duration: 0.5 }) // Derecha con rotación
+        .to(cardRef.current, { x: 0, rotation: 0, duration: 0.5 }); // Regresa al centro
 
       wiggleAnimation.current = timeline;
     } else if (wiggleAnimation.current) {
