@@ -137,7 +137,7 @@ const Cards = () => {
     });
   };
   const showDeclinePopup = () => {
-    if (MSxAlertFail <= 3) {
+    if (MSxAlertFail <= 2) {
       Swal.fire({
         title: "¡Apuesta Rechazada!",
         width: 280, // Reducimos el ancho
@@ -161,7 +161,7 @@ const Cards = () => {
   };
 
   const showApprovedPopup = () => {
-    if (MaxAlert <= 3) {
+    if (MaxAlert <= 2) {
       Swal.fire({
         title: "¡Apuesta Aprobada!",
         width: 300, // Reducimos el ancho
